@@ -46,8 +46,12 @@ load_dotenv()
 
 LINKEDIN_TOKEN   = os.getenv("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_URN     = os.getenv("LINKEDIN_PERSON_URN")   # urn:li:person:XXXXXXXX
+# DATA_DIR is overridable in production (e.g. Render persistent disk).
+# Locally it falls back to the repo directory.
+DATA_DIR         = Path(os.getenv("DATA_DIR") or Path(__file__).parent)
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 IMAGES_DIR       = Path(__file__).parent / "images"
-LOG_FILE         = Path(__file__).parent / "scheduler.log"
+LOG_FILE         = DATA_DIR / "scheduler.log"
 DRY_RUN          = os.getenv("DRY_RUN", "false").lower() == "true"
 
 # ─── Logging ──────────────────────────────────────────────────────────────────
@@ -904,7 +908,7 @@ def search_and_apply_easy_apply_jobs(keywords: list = None, max_applications: in
     }
     
     # Track applied jobs to avoid duplicates
-    applied_jobs_file = Path(__file__).parent / "applied_jobs.json"
+    applied_jobs_file = DATA_DIR / "applied_jobs.json"
     applied_jobs = {}
     
     if applied_jobs_file.exists():

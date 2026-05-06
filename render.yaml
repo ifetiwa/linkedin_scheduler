@@ -1,0 +1,75 @@
+# Render blueprint for LinkedIn Scheduler.
+#
+# One web service runs the Flask dashboard AND owns the post-publishing
+# schedule loop in a daemon thread. State (applied_jobs.json,
+# external_applied_jobs.json, scheduler_analytics.db) lives on a
+# persistent disk so it survives redeploys.
+#
+# A separate cron job hits the dashboard's /api/apply-jobs endpoint
+# daily so you don't have to click "Start Applying" every morning.
+#
+# Deploy: push this file + the rest of the repo to GitHub, then in
+# Render → New → Blueprint, point at the repo. See DEPLOY.md.
+
+services:
+  # ─── Dashboard + scheduler loop ───────────────────────────────
+  - type: web
+    name: linkedin-scheduler
+    runtime: python
+    plan: starter            # $7/mo — needed so the scheduler thread stays alive.
+                             # Free tier sleeps after 15min idle and would skip posts.
+    region: oregon           # Pick your closest region
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    # -w 1 is intentional: only one worker should own the schedule loop.
+    # --timeout 300 because the apply-jobs route runs synchronously for ~3 min.
+    startCommand: gunicorn -w 1 -b 0.0.0.0:$PORT --timeout 300 app:app
+    healthCheckPath: /api/analytics
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.5"
+      - key: DATA_DIR
+        value: /var/data
+      - key: ENABLE_SCHEDULER
+        value: "1"
+      # LinkedIn credentials — set values in the Render dashboard, not in git
+      - key: LINKEDIN_ACCESS_TOKEN
+        sync: false
+      - key: LINKEDIN_PERSON_URN
+        sync: false
+      - key: DRY_RUN
+        value: "false"
+      # Optional shared secret used by the cron job below. Set the same
+      # value in Render's dashboard for both this service and the cron.
+      - key: CRON_SECRET
+        generateValue: true
+    disk:
+      name: linkedin-data
+      mountPath: /var/data
+      sizeGB: 1
+
+  # ─── Daily auto-apply cron ───────────────────────────────────
+  # Pings the running web service so state lives in one place.
+  # Edit the schedule (UTC) to your preferred apply time.
+  - type: cron
+    name: daily-apply-cron
+    runtime: python
+    plan: starter
+    schedule: "0 13 * * *"   # 09:00 ET / 13:00 UTC daily
+    branch: main
+    buildCommand: pip install requests
+    startCommand: |
+      python -c "
+      import os, requests
+      url = os.environ['DASHBOARD_URL'].rstrip('/') + '/api/cron/apply-jobs'
+      r = requests.post(url, json={'count': 100, 'secret': os.environ['CRON_SECRET']}, timeout=600)
+      print('Status:', r.status_code, r.text[:500])
+      "
+    envVars:
+      - key: DASHBOARD_URL
+        # Set this to the URL Render gives you after the web service deploys,
+        # e.g. https://linkedin-scheduler.onrender.com
+        sync: false
+      - key: CRON_SECRET
+        sync: false

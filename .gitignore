@@ -1,0 +1,26 @@
+# Secrets — never commit
+.env
+
+# Local state files (Render persistent disk owns these in prod)
+applied_jobs.json
+external_applied_jobs.json
+scheduler_analytics.db
+scheduler.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal docs not for git
+Tiwa_Elegbeleye_Resume_v2.pdf
+cover_letter_sample.txt

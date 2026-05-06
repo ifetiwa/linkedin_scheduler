@@ -19,12 +19,17 @@ from scheduler import (
     search_and_apply_easy_apply_jobs, LINKEDIN_TOKEN, LINKEDIN_URN
 )
 
+# State directory — env-overridable so prod (Render persistent disk) can
+# mount writable storage outside the repo. Locally falls back to repo dir.
+DATA_DIR = Path(os.getenv("DATA_DIR") or Path(__file__).parent)
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+
 # In-memory cache for external job listings (Remotive API)
 _external_jobs_cache = {"data": None, "fetched_at": None}
 EXTERNAL_JOBS_CACHE_TTL = timedelta(minutes=10)
 
 # Tracker for external (Remotive / non-LinkedIn) applications
-EXTERNAL_APPLIED_FILE = Path(__file__).parent / "external_applied_jobs.json"
+EXTERNAL_APPLIED_FILE = DATA_DIR / "external_applied_jobs.json"
 _external_applied_lock = threading.Lock()
 
 
@@ -82,8 +87,8 @@ def record_external_apply(job, cover_letter=None):
 app = Flask(__name__)
 CORS(app)
 
-# Database setup
-DB_PATH = Path(__file__).parent / "scheduler_analytics.db"
+# SQLite analytics DB lives on the same persistent volume as the JSON trackers
+DB_PATH = DATA_DIR / "scheduler_analytics.db"
 
 def init_db():
     """Initialize the database with required tables."""
@@ -452,6 +457,30 @@ def api_analytics():
 def api_errors():
     """Get recent errors."""
     return jsonify(get_errors())
+
+@app.route('/api/cron/apply-jobs', methods=['POST'])
+def api_cron_apply_jobs():
+    """Cron-triggered apply campaign. Requires CRON_SECRET env var match."""
+    expected = os.getenv("CRON_SECRET")
+    if not expected:
+        return jsonify({"status": "error", "message": "CRON_SECRET not configured"}), 503
+    body = request.json or {}
+    if body.get("secret") != expected:
+        return jsonify({"status": "error", "message": "invalid secret"}), 403
+    count = int(body.get("count", 100))
+    # Run synchronously — cron container has the time budget.
+    try:
+        results = search_and_apply_easy_apply_jobs(max_applications=count)
+        return jsonify({
+            "status": "ok",
+            "applied": results.get("applied"),
+            "duplicates": results.get("duplicate_avoided"),
+            "errors": results.get("errors"),
+        })
+    except Exception as e:
+        log_error(str(e), "Cron Apply Error")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 
 @app.route('/api/apply-jobs', methods=['POST'])
 def api_apply_jobs():
@@ -920,5 +949,41 @@ def api_posts_refresh():
     return jsonify({"status": "success", "posts": get_posts_data()})
 
 
+def _start_scheduler_thread():
+    """Boot the in-process post-publishing loop.
+
+    Disabled by default (off in dev so debug-reload doesn't double-publish).
+    Enable in production by setting ENABLE_SCHEDULER=1 *and* running gunicorn
+    with -w 1 so only one process owns the schedule.
+    """
+    if os.getenv("ENABLE_SCHEDULER", "0") != "1":
+        return
+    try:
+        import schedule as _schedule
+        from scheduler import schedule_all as _schedule_all
+        _schedule_all()
+    except Exception as e:
+        log_error(f"Scheduler boot failed: {e}", "Scheduler Boot Error")
+        return
+
+    def _loop():
+        while True:
+            try:
+                _schedule.run_pending()
+            except Exception as e:
+                log_error(f"Scheduler tick failed: {e}", "Scheduler Tick Error")
+            time.sleep(30)
+
+    t = threading.Thread(target=_loop, daemon=True, name="scheduler-loop")
+    t.start()
+
+
+# Run on import so gunicorn workers spin up the scheduler too (only worker 0
+# should be configured to enable it — see DEPLOY.md / render.yaml).
+_start_scheduler_thread()
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # Local dev — bind to 0.0.0.0 so it's reachable from other devices on the LAN.
+    # Production (Render) uses gunicorn via render.yaml startCommand.
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", "5000")), debug=True)
