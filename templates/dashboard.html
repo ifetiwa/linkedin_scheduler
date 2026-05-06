@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --bg-2: #111827;
+            --surface: #FFFFFF;
+            --surface-muted: #F8FAFC;
+            --border: #E2E8F0;
+            --text: #0F172A;
+            --text-muted: #64748B;
+            --primary: #2563EB;
+            --primary-50: #EFF6FF;
+            --primary-600: #1D4ED8;
+            --accent: #7C3AED;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --shadow: 0 1px 3px rgba(15,23,42,0.04), 0 4px 18px rgba(15,23,42,0.06);
+            --shadow-lg: 0 8px 30px rgba(15,23,42,0.12);
+            --radius: 14px;
+        }
+
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--surface-muted);
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Layout ──────────────────────────────────────────────────── */
+        .app {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: var(--bg);
+            color: #CBD5E1;
+            padding: 22px 16px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px 22px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+        }
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .nav-section-label {
+            color: #64748B;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 10px 6px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #CBD5E1;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            border: none;
+            background: transparent;
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+        }
+        .nav-item i { width: 18px; text-align: center; opacity: 0.85; }
+        .nav-item:hover { background: rgba(255,255,255,0.05); color: white; }
+        .nav-item.active {
+            background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(124,58,237,0.18));
+            color: white;
+        }
+        .nav-item.active i { color: #93C5FD; opacity: 1; }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 14px 12px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #94A3B8;
+            font-size: 12px;
+        }
+
+        .main { padding: 28px 36px 60px; max-width: 1400px; }
+
+        .page-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        .page-title { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+        .page-subtitle { color: var(--text-muted); margin: 4px 0 0; font-size: 14px; }
+
+        /* ─── Cards & Stats ───────────────────────────────────────────── */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .card-pad { padding: 22px; }
+        .card-head {
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .card-title { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 10px; margin: 0; }
+        .card-title i { color: var(--primary); }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-label { color: var(--text-muted); font-size: 12px; font-weight: 500; letter-spacing: 0.02em; }
+        .stat-value { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-top: 4px; }
+        .stat-icon {
+            position: absolute; top: 16px; right: 16px;
+            width: 36px; height: 36px; border-radius: 10px;
+            display: grid; place-items: center;
+            background: var(--primary-50); color: var(--primary);
+        }
+        .stat.success .stat-icon { background: #ECFDF5; color: var(--success); }
+        .stat.warning .stat-icon { background: #FFFBEB; color: var(--warning); }
+        .stat.danger  .stat-icon { background: #FEF2F2; color: var(--danger); }
+        .stat-trend { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+        /* ─── Buttons ─────────────────────────────────────────────────── */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 9px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover:not(:disabled) { background: var(--primary-600); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37,99,235,0.25); }
+        .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+        .btn-ghost:hover:not(:disabled) { background: var(--surface-muted); border-color: #CBD5E1; }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover:not(:disabled) { background: #059669; }
+        .btn-icon { padding: 8px 10px; }
+        .btn-sm { padding: 6px 12px; font-size: 12px; }
+
+        /* ─── Forms ───────────────────────────────────────────────────── */
+        .field { display: flex; flex-direction: column; gap: 6px; }
+        .field label { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+        .input, .select {
+            padding: 9px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 13px;
+            font-family: inherit;
+            background: var(--surface);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .input:focus, .select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+
+        /* Filter bar */
+        .filter-bar {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--border);
+            align-items: end;
+            background: var(--surface-muted);
+            border-radius: 0;
+        }
+        .filter-bar .field { min-width: 160px; }
+        .filter-bar .grow { flex: 1; min-width: 200px; }
+
+        /* ─── Tables ──────────────────────────────────────────────────── */
+        .table { width: 100%; border-collapse: collapse; }
+        .table th {
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 12px 22px;
+            background: var(--surface-muted);
+            border-bottom: 1px solid var(--border);
+        }
+        .table td {
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+            vertical-align: middle;
+        }
+        .table tbody tr:last-child td { border-bottom: none; }
+        .table tbody tr:hover { background: var(--surface-muted); }
+
+        .badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .badge.published { background: #D1FAE5; color: #065F46; }
+        .badge.scheduled { background: #DBEAFE; color: #1E40AF; }
+        .badge.today    { background: #FEF3C7; color: #92400E; }
+        .badge.applied  { background: #E0E7FF; color: #3730A3; }
+        .badge.gray     { background: #F1F5F9; color: #475569; }
+
+        /* ─── Post cards ──────────────────────────────────────────────── */
+        .post-row {
+            display: grid;
+            grid-template-columns: 56px 1fr auto;
+            gap: 16px;
+            align-items: center;
+            padding: 16px 22px;
+            border-bottom: 1px solid var(--border);
+        }
+        .post-row:last-child { border-bottom: none; }
+        .post-row:hover { background: var(--surface-muted); }
+        .post-date {
+            text-align: center;
+            background: var(--primary-50);
+            color: var(--primary);
+            border-radius: 10px;
+            padding: 8px 6px;
+            font-weight: 700;
+        }
+        .post-date .day { font-size: 16px; line-height: 1; }
+        .post-date .month { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+        .post-title { font-weight: 600; font-size: 14px; margin: 0; }
+        .post-meta { color: var(--text-muted); font-size: 12px; margin-top: 4px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .post-actions { display: flex; gap: 8px; }
+
+        /* ─── Job cards ───────────────────────────────────────────────── */
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 14px;
+            padding: 18px;
+        }
+        .job-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+        }
+        .job-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .job-card-head { display: flex; gap: 12px; align-items: flex-start; }
+        .job-logo {
+            width: 40px; height: 40px; border-radius: 8px;
+            background: var(--surface-muted);
+            object-fit: contain;
+            flex-shrink: 0;
+            border: 1px solid var(--border);
+        }
+        .job-logo.placeholder {
+            display: grid; place-items: center;
+            color: var(--primary); font-weight: 700; font-size: 14px;
+        }
+        .job-card h4 { font-size: 14px; font-weight: 600; margin: 0; line-height: 1.3; }
+        .job-card .company { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+        .job-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+        .job-tag { background: var(--surface-muted); color: var(--text-muted); font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 500; }
+        .job-card-foot { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--border); }
+        .job-meta-line { color: var(--text-muted); font-size: 11px; }
+
+        /* ─── Misc ────────────────────────────────────────────────────── */
+        .page { display: none; }
+        .page.active { display: block; }
+
+        .empty {
+            text-align: center;
+            color: var(--text-muted);
+            padding: 60px 20px;
+            font-size: 13px;
+        }
+        .empty i { font-size: 32px; margin-bottom: 12px; opacity: 0.5; display: block; }
+
+        .progress {
+            height: 6px;
+            background: var(--surface-muted);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); transition: width 0.3s ease; }
+
+        .alert {
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            border: 1px solid;
+        }
+        .alert-success { background: #ECFDF5; color: #065F46; border-color: #A7F3D0; }
+        .alert-warning { background: #FFFBEB; color: #92400E; border-color: #FDE68A; }
+        .alert-danger  { background: #FEF2F2; color: #991B1B; border-color: #FECACA; }
+
+        .skill-pill {
+            display: inline-block;
+            background: var(--primary-50);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .modal-backdrop {
+            position: fixed; inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+            padding: 24px;
+        }
+        .modal {
+            background: var(--surface);
+            border-radius: var(--radius);
+            width: 100%; max-width: 640px;
+            max-height: 90vh;
+            display: flex; flex-direction: column;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        .modal-head {
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .modal-body { padding: 18px 22px; overflow-y: auto; }
+        .modal-foot {
+            padding: 14px 22px;
+            border-top: 1px solid var(--border);
+            display: flex; justify-content: flex-end; gap: 8px;
+            background: var(--surface-muted);
+        }
+
+        .toast {
+            position: fixed; bottom: 24px; right: 24px;
+            background: var(--bg);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            font-size: 13px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s, transform 0.2s;
+            z-index: 1000;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .toast.show { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 900px) {
+            .app { grid-template-columns: 1fr; }
+            .sidebar { position: static; height: auto; flex-direction: row; flex-wrap: wrap; gap: 4px; padding: 12px; }
+            .sidebar .nav-section-label, .sidebar-footer { display: none; }
+            .main { padding: 18px; }
+            .stat-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- ─── Sidebar ─────────────────────────────────────────────────── -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo"><i class="fab fa-linkedin-in"></i></div>
+            <span>Scheduler</span>
+        </div>
+
+        <div class="nav-section-label">Workspace</div>
+        <button class="nav-item active" data-page="dashboard"><i class="fas fa-gauge-high"></i> Dashboard</button>
+        <button class="nav-item" data-page="posts"><i class="fas fa-calendar-days"></i> Posts</button>
+
+        <div class="nav-section-label">Jobs</div>
+        <button class="nav-item" data-page="linkedin-jobs"><i class="fab fa-linkedin"></i> LinkedIn (Applied)</button>
+        <button class="nav-item" data-page="live-jobs"><i class="fas fa-bolt"></i> Live Applications</button>
+        <button class="nav-item" data-page="external-jobs"><i class="fas fa-globe"></i> External Jobs</button>
+
+        <div class="nav-section-label">Account</div>
+        <button class="nav-item" data-page="profile"><i class="fas fa-user"></i> Profile</button>
+
+        <div class="sidebar-footer">
+            <div><strong style="color:white;">Tiwa Elegbeleye</strong></div>
+            <div>Senior Engineer</div>
+        </div>
+    </aside>
+
+    <!-- ─── Main Content ────────────────────────────────────────────── -->
+    <main class="main">
+
+        <!-- =========== DASHBOARD =========== -->
+        <section class="page active" id="page-dashboard">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Dashboard</h1>
+                    <p class="page-subtitle">Overview of your posts, applications and activity.</p>
+                </div>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-label">Posts Scheduled</div>
+                    <div class="stat-value" id="total-posts">—</div>
+                    <div class="stat-trend" id="posts-trend">Loading…</div>
+                </div>
+                <div class="stat success">
+                    <div class="stat-icon"><i class="fas fa-paper-plane"></i></div>
+                    <div class="stat-label">Published</div>
+                    <div class="stat-value" id="published-posts">—</div>
+                    <div class="stat-trend" id="published-trend">—</div>
+                </div>
+                <div class="stat warning">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="stat-label">Jobs Applied</div>
+                    <div class="stat-value" id="jobs-applied">—</div>
+                    <div class="stat-trend">All-time count</div>
+                </div>
+                <div class="stat danger">
+                    <div class="stat-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                    <div class="stat-label">Errors</div>
+                    <div class="stat-value" id="total-errors">—</div>
+                    <div class="stat-trend">Last 20 captured</div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 22px;">
+                <div class="card-head">
+                    <h3 class="card-title"><i class="fas fa-bolt"></i> Job Application Engine</h3>
+                </div>
+                <div class="card-pad">
+                    <p style="color: var(--text-muted); margin: 0 0 14px;">Apply to up to 100 remote jobs (Canada/USA) with personalized cover letters.</p>
+                    <div style="display:flex; gap:12px; align-items:end; flex-wrap: wrap;">
+                        <div class="field" style="width: 180px;">
+                            <label>Number of Applications</label>
+                            <input type="number" class="input" id="apply-count" value="100" min="1" max="100">
+                        </div>
+                        <button class="btn btn-primary" id="apply-btn" onclick="startApplications()">
+                            <i class="fas fa-play"></i> Start Applying
+                        </button>
+                    </div>
+                    <div id="apply-progress" style="display:none; margin-top: 18px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:12px;">
+                            <span id="progress-text">Starting…</span>
+                            <span id="progress-pct">0%</span>
+                        </div>
+                        <div class="progress"><div class="progress-bar" id="progress-bar" style="width: 0%"></div></div>
+                    </div>
+                    <div id="apply-success" class="alert alert-success" style="display:none; margin-top: 14px;">
+                        <i class="fas fa-circle-check"></i> <strong>Done.</strong> <span id="success-message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1.6fr 1fr; gap: 22px;">
+                <div class="card">
+                    <div class="card-head">
+                        <h3 class="card-title"><i class="fas fa-clock"></i> Recent Activity</h3>
+                        <a class="btn btn-ghost btn-sm" data-page="linkedin-jobs">View all</a>
+                    </div>
+                    <table class="table">
+                        <thead><tr><th>Job Title</th><th>Company</th><th>Applied</th></tr></thead>
+                        <tbody id="recent-jobs"></tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <div class="card-head">
+                        <h3 class="card-title"><i class="fas fa-triangle-exclamation"></i> Errors</h3>
+                    </div>
+                    <div class="card-pad" id="errors-list" style="max-height: 360px; overflow-y: auto;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== POSTS =========== -->
+        <section class="page" id="page-posts">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Posting Schedule</h1>
+                    <p class="page-subtitle">Your queue of upcoming and published LinkedIn posts.</p>
+                </div>
+                <button class="btn btn-ghost" onclick="loadPosts(true)">
+                    <i class="fas fa-arrows-rotate"></i> Refresh All
+                </button>
+            </div>
+            <div class="card">
+                <div id="posts-list"></div>
+            </div>
+        </section>
+
+        <!-- =========== LINKEDIN JOBS =========== -->
+        <section class="page" id="page-linkedin-jobs">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">LinkedIn Applications</h1>
+                    <p class="page-subtitle">Every job you've applied to via the scheduler.</p>
+                </div>
+                <span class="badge gray" id="linkedin-jobs-count">0 jobs</span>
+            </div>
+            <div class="card">
+                <div class="filter-bar">
+                    <div class="field grow">
+                        <label>Search</label>
+                        <input type="text" class="input" id="lnk-search" placeholder="Title, company, location…">
+                    </div>
+                    <div class="field">
+                        <label>Applied</label>
+                        <select class="select" id="lnk-range">
+                            <option value="all">All time</option>
+                            <option value="today">Today</option>
+                            <option value="7d">Last 7 days</option>
+                            <option value="30d">Last 30 days</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-ghost" onclick="loadLinkedinJobs()"><i class="fas fa-arrows-rotate"></i> Refresh</button>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Applied</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="linkedin-jobs-table"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- =========== EXTERNAL JOBS =========== -->
+        <section class="page" id="page-live-jobs">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Live Applications</h1>
+                    <p class="page-subtitle">Jobs being applied to right now — real-time feed.</p>
+                </div>
+                <span class="badge gray" id="live-jobs-count">0 jobs</span>
+            </div>
+            <div class="card">
+                <table class="data-table" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Applied</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="live-jobs-table">
+                        <tr><td colspan="5" class="empty"><i class="fas fa-inbox"></i> No live applications at the moment</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- =========== EXTERNAL JOBS WITH VISA SPONSORSHIP =========== -->
+        <section class="page" id="page-external-jobs">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">External Jobs</h1>
+                    <p class="page-subtitle">Remote jobs from Remotive with visa sponsorship opportunities.</p>
+                </div>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <span class="badge gray" id="external-jobs-count">0 jobs</span>
+                    <button class="btn btn-success btn-sm" onclick="bulkAutoApply()" title="Draft cover letters and open the top N postings">
+                        <i class="fas fa-wand-magic-sparkles"></i> Auto-Apply Top <span id="bulk-apply-n">10</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="filter-bar">
+                    <div class="field grow">
+                        <label>Search Keywords</label>
+                        <input type="text" class="input" id="ext-search" placeholder="e.g., React, Node, Senior Engineer…">
+                    </div>
+                    <div class="field">
+                        <label>Country</label>
+                        <select class="select" id="ext-country">
+                            <option value="Canada">Canada</option>
+                            <option value="USA">USA</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </div>
+                    <div class="field" style="display: flex; align-items: flex-end; gap: 6px;">
+                        <label>
+                            <input type="checkbox" id="ext-visa-only">
+                            Visa Sponsorship Only
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label>Applied</label>
+                        <select class="select" id="ext-applied">
+                            <option value="all">All</option>
+                            <option value="false" selected>Not yet applied</option>
+                            <option value="true">Already applied</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Bulk size</label>
+                        <input type="number" class="input" id="bulk-size" value="10" min="1" max="50" style="width: 90px;" oninput="document.getElementById('bulk-apply-n').textContent=this.value">
+                    </div>
+                    <button class="btn btn-ghost" onclick="loadExternalJobsWithVisa(true)"><i class="fas fa-arrows-rotate"></i> Refresh</button>
+                </div>
+                <div id="external-jobs-grid" class="job-grid"></div>
+            </div>
+        </section>
+
+        <!-- ─── Cover Letter Modal ─── -->
+        <div class="modal-backdrop" id="cl-modal" style="display:none;">
+            <div class="modal">
+                <div class="modal-head">
+                    <div>
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Cover Letter Draft</div>
+                        <h3 id="cl-title" style="margin: 4px 0 0; font-size: 18px;">—</h3>
+                    </div>
+                    <button class="btn btn-ghost btn-icon" onclick="closeCoverLetterModal()"><i class="fas fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="cl-text" class="input" style="width:100%; min-height: 360px; font-family: 'Inter', sans-serif; line-height: 1.6;"></textarea>
+                    <p style="color: var(--text-muted); font-size: 12px; margin: 8px 0 0;">Drafted from your resume profile + the job description. Edit before applying.</p>
+                </div>
+                <div class="modal-foot">
+                    <button class="btn btn-ghost" onclick="copyCoverLetter()"><i class="fas fa-copy"></i> Copy</button>
+                    <button class="btn btn-primary" id="cl-apply-btn" onclick="confirmCoverLetterApply()"><i class="fas fa-paper-plane"></i> Apply with this letter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========== PROFILE =========== -->
+        <section class="page" id="page-profile">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Profile</h1>
+                    <p class="page-subtitle">The resume context used for cover letters and applications.</p>
+                </div>
+            </div>
+            <div class="card card-pad">
+                <h2 style="margin: 0 0 4px;">Tiwa Elegbeleye</h2>
+                <p style="color: var(--text-muted); margin: 0 0 18px;">Senior Full Stack Developer & Cybersecurity Engineer</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 18px;">
+                    <div><div class="stat-label">Experience</div><div style="font-weight:600;">8+ years</div></div>
+                    <div><div class="stat-label">Location</div><div style="font-weight:600;">Canada</div></div>
+                    <div><div class="stat-label">Status</div><div style="font-weight:600; color: var(--success);">Open to opportunities</div></div>
+                </div>
+                <div class="stat-label" style="margin-bottom: 8px;">Key Skills</div>
+                <div>
+                    <span class="skill-pill">React</span>
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">AWS</span>
+                    <span class="skill-pill">Cybersecurity</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">Docker</span>
+                    <span class="skill-pill">PostgreSQL</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-circle-check"></i><span id="toast-msg"></span></div>
+
+<script>
+    // ─── Routing ───────────────────────────────────────────────────
+    document.querySelectorAll('[data-page]').forEach(el => {
+        el.addEventListener('click', e => {
+            e.preventDefault();
+            navigate(el.dataset.page);
+        });
+    });
+
+    function navigate(page) {
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.page === page));
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page-' + page).classList.add('active');
+        if (page === 'posts') loadPosts();
+        if (page === 'linkedin-jobs') loadLinkedinJobs();
+        if (page === 'external-jobs') loadExternalJobs();
+    }
+
+    // ─── Toast ─────────────────────────────────────────────────────
+    function toast(msg) {
+        const t = document.getElementById('toast');
+        document.getElementById('toast-msg').textContent = msg;
+        t.classList.add('show');
+        clearTimeout(window._toastT);
+        window._toastT = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+
+    // ─── Boot ──────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+        loadAnalytics();
+        loadRecentJobs();
+        loadErrors();
+        loadLiveJobs();
+        loadExternalJobsWithVisa();
+        
+        setInterval(() => { 
+            loadAnalytics(); 
+            loadErrors();
+            loadLiveJobs();
+        }, 10000);
+
+        // Wire up filter listeners for LinkedIn jobs
+        document.getElementById('lnk-search').addEventListener('input', debounce(loadLinkedinJobs, 250));
+        document.getElementById('lnk-range').addEventListener('change', loadLinkedinJobs);
+        
+        // Wire up filter listeners for external jobs with visa sponsorship
+        document.getElementById('ext-country').addEventListener('change', loadExternalJobsWithVisa);
+        document.getElementById('ext-visa-only').addEventListener('change', loadExternalJobsWithVisa);
+        document.getElementById('ext-applied').addEventListener('change', loadExternalJobsWithVisa);
+        document.getElementById('ext-search').addEventListener('input', debounce(loadExternalJobsWithVisa, 300));
+        
+        // Wire up page navigation
+        document.querySelectorAll('.nav-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
+                switchPage(page);
+                
+                // Load page-specific data
+                if (page === 'live-jobs') loadLiveJobs();
+                else if (page === 'external-jobs') loadExternalJobsWithVisa();
+                else if (page === 'linkedin-jobs') loadLinkedinJobs();
+            });
+        });
+    });
+
+    function debounce(fn, ms) {
+        let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
+    }
+
+    function switchPage(page) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+        // Show selected page
+        const el = document.getElementById('page-' + page);
+        if (el) el.style.display = 'block';
+        // Update nav
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-page') === page) item.classList.add('active');
+        });
+    }
+
+    // ─── Data Loaders ──────────────────────────────────────────────
+    function loadAnalytics() {
+        fetch('/api/analytics').then(r => r.json()).then(d => {
+            document.getElementById('total-posts').textContent = d.total_posts;
+            document.getElementById('published-posts').textContent = d.published_posts;
+            document.getElementById('jobs-applied').textContent = d.total_jobs_applied;
+            document.getElementById('posts-trend').textContent = `${d.scheduled_posts} upcoming`;
+        });
+        fetch('/api/stats').then(r => r.json()).then(d => {
+            document.getElementById('total-errors').textContent = d.errors;
+            const pub = d.posts.breakdown.published;
+            const tot = d.posts.total || 1;
+            document.getElementById('published-trend').textContent = `${Math.round((pub/tot)*100)}% of campaign`;
+        });
+    }
+
+    function loadRecentJobs() {
+        fetch('/api/jobs?range=all').then(r => r.json()).then(jobs => {
+            const tbody = document.getElementById('recent-jobs');
+            if (!jobs.length) { tbody.innerHTML = `<tr><td colspan="3" class="empty"><i class="fas fa-inbox"></i>No applications yet</td></tr>`; return; }
+            tbody.innerHTML = jobs.slice(0, 8).map(j => `
+                <tr>
+                    <td><strong>${esc(j.title)}</strong></td>
+                    <td>${esc(j.company)}</td>
+                    <td><small>${formatTime(new Date(j.timestamp))}</small></td>
+                </tr>`).join('');
+        });
+    }
+
+    function loadErrors() {
+        fetch('/api/errors').then(r => r.json()).then(errors => {
+            const el = document.getElementById('errors-list');
+            if (!errors.length) { el.innerHTML = `<div class="empty"><i class="fas fa-shield-halved"></i>No errors logged</div>`; return; }
+            el.innerHTML = errors.slice(0, 8).map(e => `
+                <div class="alert alert-warning" style="margin-bottom:8px;">
+                    <strong>${esc(e.type)}</strong>
+                    <div>${esc(e.message)}</div>
+                    <small style="opacity:0.75;">${formatTime(new Date(e.time))}</small>
+                </div>`).join('');
+        });
+    }
+
+    // ─── Posts ─────────────────────────────────────────────────────
+    function loadPosts(forceRefresh) {
+        const url = forceRefresh ? '/api/posts/refresh' : '/api/posts';
+        fetch(url).then(r => r.json()).then(payload => {
+            const posts = Array.isArray(payload) ? payload : payload.posts;
+            const el = document.getElementById('posts-list');
+            if (!posts || !posts.length) { el.innerHTML = `<div class="empty"><i class="fas fa-calendar"></i>No posts scheduled</div>`; return; }
+            el.innerHTML = posts.map(p => {
+                const d = new Date(p.date + 'T00:00:00');
+                const day = d.getDate();
+                const month = d.toLocaleString('en-US', { month: 'short' });
+                const statusKey = p.status.toLowerCase();
+                return `
+                    <div class="post-row">
+                        <div class="post-date">
+                            <div class="day">${day}</div>
+                            <div class="month">${month}</div>
+                        </div>
+                        <div>
+                            <p class="post-title">${esc(p.title)}</p>
+                            <div class="post-meta">
+                                <span><i class="far fa-clock"></i> ${esc(p.time)}</span>
+                                <span class="badge ${statusKey}">${esc(p.status)}</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="btn btn-ghost btn-sm" title="Refresh status" onclick="refreshPost(${p.id}, this)"><i class="fas fa-arrows-rotate"></i></button>
+                            <button class="btn btn-primary btn-sm" onclick="postNow(${p.id}, this)"><i class="fas fa-paper-plane"></i> Post Now</button>
+                        </div>
+                    </div>`;
+            }).join('');
+            if (forceRefresh) toast('Schedule refreshed');
+        });
+    }
+
+    function refreshPost(id, btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        fetch('/api/posts/refresh').then(r => r.json()).then(() => {
+            loadPosts();
+            toast(`Post #${id} status refreshed`);
+        }).catch(() => toast('Refresh failed'))
+          .finally(() => { btn.disabled = false; });
+    }
+
+    function postNow(id, btn) {
+        if (!confirm(`Publish post #${id} to LinkedIn right now?`)) return;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Posting…';
+        fetch(`/api/posts/${id}/publish`, { method: 'POST' })
+            .then(r => r.json())
+            .then(d => {
+                if (d.status === 'success') {
+                    toast(`Post #${id} published`);
+                    loadPosts();
+                } else {
+                    toast('Failed: ' + (d.message || 'unknown'));
+                }
+            })
+            .catch(e => toast('Error: ' + e.message))
+            .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Post Now'; });
+    }
+
+    // ─── LinkedIn Jobs ─────────────────────────────────────────────
+    function loadLinkedinJobs() {
+        const range = document.getElementById('lnk-range').value;
+        const q = document.getElementById('lnk-search').value;
+        fetch(`/api/jobs?range=${encodeURIComponent(range)}&q=${encodeURIComponent(q)}`)
+            .then(r => r.json())
+            .then(jobs => {
+                document.getElementById('linkedin-jobs-count').textContent = `${jobs.length} job${jobs.length === 1 ? '' : 's'}`;
+                const tbody = document.getElementById('linkedin-jobs-table');
+                if (!jobs.length) { tbody.innerHTML = `<tr><td colspan="5" class="empty"><i class="fas fa-inbox"></i>No applications match these filters</td></tr>`; return; }
+                tbody.innerHTML = jobs.map(j => `
+                    <tr>
+                        <td><strong>${esc(j.title)}</strong></td>
+                        <td>${esc(j.company)}</td>
+                        <td><span style="color: var(--text-muted);">${esc(j.location || '')}</span></td>
+                        <td>${formatTime(new Date(j.timestamp))}<div style="color: var(--text-muted); font-size: 11px;">${formatDate(new Date(j.timestamp))}</div></td>
+                        <td><span class="badge applied">${esc(j.status)}</span></td>
+                    </tr>`).join('');
+            });
+    }
+
+    // ─── Live Jobs (Real-time) ─────────────────────────────────────
+    function loadLiveJobs() {
+        fetch('/api/live-jobs')
+            .then(r => r.json())
+            .then(jobs => {
+                document.getElementById('live-jobs-count').textContent = `${jobs.length} job${jobs.length === 1 ? '' : 's'}`;
+                const tbody = document.getElementById('live-jobs-table');
+                if (!jobs.length) { 
+                    tbody.innerHTML = `<tr><td colspan="5" class="empty"><i class="fas fa-inbox"></i> No live applications at the moment</td></tr>`; 
+                    return; 
+                }
+                tbody.innerHTML = jobs.map(j => `
+                    <tr>
+                        <td><strong>${esc(j.title)}</strong></td>
+                        <td>${esc(j.company)}</td>
+                        <td><span style="color: var(--text-muted);">${esc(j.location || j.country || '')}</span></td>
+                        <td><small>${formatTime(new Date(j.timestamp))}</small></td>
+                        <td><span class="badge applied">Applied</span></td>
+                    </tr>`).join('');
+            });
+    }
+
+    // ─── External Jobs with Visa Sponsorship ────────────────────────
+    // Cache the latest job list keyed by id so we can re-render a single
+    // card after the user marks it applied without re-fetching everything.
+    const _extJobsById = {};
+
+    function loadExternalJobsWithVisa(force) {
+        const grid = document.getElementById('external-jobs-grid');
+        const country = document.getElementById('ext-country').value || 'Canada';
+        const visa_only = document.getElementById('ext-visa-only').checked;
+        const applied = (document.getElementById('ext-applied') || {}).value || 'all';
+        const q = (document.getElementById('ext-search') || {}).value || '';
+
+        grid.innerHTML = `<div class="empty" style="grid-column: 1/-1;"><i class="fas fa-spinner fa-spin"></i>Loading remote jobs…</div>`;
+
+        const params = new URLSearchParams({ country, visa: visa_only ? 'true' : 'false', applied });
+        if (force) params.set('refresh', '1');
+
+        fetch('/api/external-jobs-visa?' + params.toString())
+            .then(r => r.json())
+            .then(data => {
+                let jobs = data.jobs || [];
+                // Client-side keyword filter (the visa endpoint already keyword-prefilters,
+                // so this just narrows further as the user types)
+                if (q.trim()) {
+                    const needle = q.trim().toLowerCase();
+                    jobs = jobs.filter(j =>
+                        (j.title || '').toLowerCase().includes(needle) ||
+                        (j.company || '').toLowerCase().includes(needle) ||
+                        (j.tags || []).some(t => (t || '').toLowerCase().includes(needle))
+                    );
+                }
+                const appliedNum = data.applied_count || jobs.filter(j => j.applied).length;
+                document.getElementById('external-jobs-count').textContent =
+                    `${jobs.length} job${jobs.length === 1 ? '' : 's'} · ${appliedNum} applied`;
+
+                if (!jobs.length) {
+                    grid.innerHTML = `<div class="empty" style="grid-column: 1/-1;"><i class="fas fa-magnifying-glass"></i>No jobs match these filters.</div>`;
+                    return;
+                }
+                Object.keys(_extJobsById).forEach(k => delete _extJobsById[k]);
+                jobs.forEach(j => { _extJobsById[String(j.id)] = j; });
+                grid.innerHTML = jobs.map(renderExternalCard).join('');
+            })
+            .catch(e => {
+                grid.innerHTML = `<div class="empty" style="grid-column: 1/-1; color: var(--danger);"><i class="fas fa-circle-exclamation"></i>Failed to load: ${esc(e.message)}</div>`;
+            });
+    }
+
+    function renderExternalCard(j) {
+        const initials = (j.company || '?').slice(0, 2).toUpperCase();
+        const visaBadge = j.visa_sponsorship
+            ? '<span class="badge" style="background: var(--success); color: white; font-size: 11px;"><i class="fas fa-check"></i> Visa Sponsored</span>'
+            : '';
+        const appliedBadge = j.applied
+            ? `<span class="badge applied" style="font-size:11px;"><i class="fas fa-check"></i> Applied${j.applied_at ? ' · ' + formatTime(new Date(j.applied_at)) : ''}</span>`
+            : '';
+        const tags = (j.tags || []).slice(0, 3).map(t => `<span class="job-tag">${esc(t)}</span>`).join('');
+
+        const actionBtn = j.applied
+            ? `<button class="btn btn-ghost btn-sm" onclick="viewSavedCoverLetter('${esc(j.id)}')" title="View saved cover letter"><i class="fas fa-file-lines"></i></button>
+               <button class="btn btn-ghost btn-sm" onclick="unapplyExternal('${esc(j.id)}')" title="Remove from applied list"><i class="fas fa-rotate-left"></i></button>
+               <a class="btn btn-ghost btn-sm" href="${esc(j.url || '#')}" target="_blank" rel="noopener" title="Open posting"><i class="fas fa-arrow-up-right-from-square"></i></a>`
+            : `<button class="btn btn-ghost btn-sm" onclick="draftCoverLetter('${esc(j.id)}')" title="Draft a cover letter"><i class="fas fa-wand-magic-sparkles"></i> Draft</button>
+               <button class="btn btn-primary btn-sm" onclick="applyExternal('${esc(j.id)}', this)"><i class="fas fa-paper-plane"></i> Apply</button>`;
+
+        return `
+            <div class="job-card" data-job-id="${esc(j.id)}">
+                <div class="job-card-head">
+                    <div class="job-logo placeholder">${esc(initials)}</div>
+                    <div style="min-width:0; flex:1;">
+                        <h4>${esc(j.title)}</h4>
+                        <div class="company">${esc(j.company)}</div>
+                    </div>
+                </div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">
+                    <i class="fas fa-location-dot"></i> ${esc(j.location || j.country || 'Remote')}
+                    ${j.salary ? ` · <i class="fas fa-coins"></i> ${esc(j.salary)}` : ''}
+                </div>
+                <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                    ${visaBadge}
+                    ${appliedBadge}
+                </div>
+                ${tags ? `<div class="job-tags">${tags}</div>` : ''}
+                <div style="font-size: 12px; line-height: 1.5; color: var(--text-muted);">
+                    ${esc(j.description || 'Remote technology position')}
+                </div>
+                <div class="job-card-foot">
+                    <span class="job-meta-line"><i class="fas fa-briefcase"></i> ${esc(j.source || 'Remotive')}</span>
+                    <div style="display:flex; gap:6px;">${actionBtn}</div>
+                </div>
+            </div>`;
+    }
+
+    function applyExternal(id, btn) {
+        const job = _extJobsById[String(id)];
+        if (!job) return;
+        if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>'; }
+
+        // Open the real posting in a new tab so the user can finish the apply on the company's site.
+        if (job.url) window.open(job.url, '_blank', 'noopener');
+
+        fetch('/api/external-jobs/apply', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(job)
+        })
+        .then(r => r.json())
+        .then(d => {
+            if (d.status === 'recorded' || d.status === 'duplicate') {
+                job.applied = true;
+                job.applied_at = (d.entry && d.entry.timestamp) || new Date().toISOString();
+                _extJobsById[String(id)] = job;
+                const card = document.querySelector(`[data-job-id="${CSS.escape(String(id))}"]`);
+                if (card) card.outerHTML = renderExternalCard(job);
+                toast(d.status === 'duplicate' ? 'Already tracked' : 'Marked as applied');
+            } else {
+                toast('Failed: ' + (d.message || 'unknown'));
+                if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Apply'; }
+            }
+        })
+        .catch(e => {
+            toast('Error: ' + e.message);
+            if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Apply'; }
+        });
+    }
+
+    function unapplyExternal(id) {
+        if (!confirm('Remove this job from your applied list?')) return;
+        fetch('/api/external-jobs/applied/' + encodeURIComponent(id), { method: 'DELETE' })
+            .then(r => r.json())
+            .then(() => {
+                toast('Removed from applied');
+                loadExternalJobsWithVisa();
+            });
+    }
+
+    // ─── Cover Letter Modal ────────────────────────────────────────
+    let _clCurrentJobId = null;
+
+    function draftCoverLetter(id) {
+        const job = _extJobsById[String(id)];
+        if (!job) return;
+        _clCurrentJobId = String(id);
+        document.getElementById('cl-title').textContent = `${job.title} · ${job.company}`;
+        document.getElementById('cl-text').value = 'Drafting…';
+        document.getElementById('cl-modal').style.display = 'flex';
+        document.getElementById('cl-apply-btn').style.display = job.applied ? 'none' : '';
+
+        fetch('/api/cover-letter', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                job_title: job.title,
+                company: job.company,
+                job_description: job.description || '',
+            }),
+        })
+        .then(r => r.json())
+        .then(d => {
+            document.getElementById('cl-text').value = d.cover_letter || '';
+        })
+        .catch(e => {
+            document.getElementById('cl-text').value = 'Failed to draft: ' + e.message;
+        });
+    }
+
+    function viewSavedCoverLetter(id) {
+        _clCurrentJobId = String(id);
+        const job = _extJobsById[String(id)] || {};
+        document.getElementById('cl-title').textContent = `${job.title || ''} · ${job.company || ''}`.replace(/^ · /, '');
+        document.getElementById('cl-text').value = 'Loading…';
+        document.getElementById('cl-modal').style.display = 'flex';
+        document.getElementById('cl-apply-btn').style.display = 'none';
+
+        fetch('/api/external-jobs/applied/' + encodeURIComponent(id) + '/cover-letter')
+            .then(r => r.json())
+            .then(d => {
+                document.getElementById('cl-title').textContent = `${d.title || ''} · ${d.company || ''}`;
+                document.getElementById('cl-text').value = d.cover_letter || '(no cover letter saved)';
+            });
+    }
+
+    function closeCoverLetterModal() {
+        document.getElementById('cl-modal').style.display = 'none';
+        _clCurrentJobId = null;
+    }
+
+    function copyCoverLetter() {
+        const text = document.getElementById('cl-text').value;
+        navigator.clipboard.writeText(text).then(() => toast('Copied to clipboard'));
+    }
+
+    function confirmCoverLetterApply() {
+        const id = _clCurrentJobId;
+        const job = _extJobsById[String(id)];
+        if (!job) return;
+        const cover_letter = document.getElementById('cl-text').value;
+        if (job.url) window.open(job.url, '_blank', 'noopener');
+
+        fetch('/api/external-jobs/apply', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({...job, cover_letter}),
+        })
+        .then(r => r.json())
+        .then(d => {
+            if (d.status === 'recorded' || d.status === 'duplicate') {
+                job.applied = true;
+                job.applied_at = (d.entry && d.entry.timestamp) || new Date().toISOString();
+                _extJobsById[String(id)] = job;
+                const card = document.querySelector(`[data-job-id="${CSS.escape(String(id))}"]`);
+                if (card) card.outerHTML = renderExternalCard(job);
+                toast(d.status === 'duplicate' ? 'Already tracked' : 'Applied with cover letter');
+            }
+            closeCoverLetterModal();
+        });
+    }
+
+    // ─── Bulk Auto-Apply ──────────────────────────────────────────
+    function bulkAutoApply() {
+        const n = parseInt(document.getElementById('bulk-size').value, 10) || 10;
+        const candidates = Object.values(_extJobsById)
+            .filter(j => !j.applied)
+            .slice(0, n);
+        if (!candidates.length) { toast('No un-applied jobs in view'); return; }
+        if (!confirm(`Auto-draft cover letters and open ${candidates.length} job posting(s)? Each will open in a new tab and be marked as applied.`)) return;
+
+        // Open URLs sequentially with a small stagger to dodge popup blockers
+        candidates.forEach((j, idx) => {
+            setTimeout(() => { if (j.url) window.open(j.url, '_blank', 'noopener'); }, idx * 250);
+        });
+
+        fetch('/api/external-jobs/auto-apply', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ jobs: candidates }),
+        })
+        .then(r => r.json())
+        .then(d => {
+            toast(`Auto-applied to ${d.recorded} of ${d.total} (cover letters drafted & saved)`);
+            loadExternalJobsWithVisa();
+        })
+        .catch(e => toast('Bulk apply failed: ' + e.message));
+    }
+
+    // ─── External Jobs (Legacy) ────────────────────────────────────
+    function loadExternalJobs(force) {
+        // Alias to new function for backward compatibility
+        loadExternalJobsWithVisa(force);
+    }
+
+    function loadCategories() {
+        // Legacy function - no-op
+    }
+
+    // ─── Apply Engine ──────────────────────────────────────────────
+    function startApplications() {
+        const count = parseInt(document.getElementById('apply-count').value, 10);
+        if (!count || count < 1 || count > 100) { alert('Enter a number between 1 and 100'); return; }
+        const btn = document.getElementById('apply-btn');
+        btn.disabled = true;
+        document.getElementById('apply-progress').style.display = 'block';
+        document.getElementById('apply-success').style.display = 'none';
+
+        fetch('/api/apply-jobs', {
+            method: 'POST', headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ count })
+        }).then(r => r.json()).then(() => {
+            let elapsed = 0;
+            const total = count * 2;
+            const iv = setInterval(() => {
+                elapsed += 1;
+                const pct = Math.min((elapsed / total) * 100, 95);
+                document.getElementById('progress-bar').style.width = pct + '%';
+                document.getElementById('progress-pct').textContent = Math.round(pct) + '%';
+                document.getElementById('progress-text').textContent = `Processing ${count} applications…`;
+                if (elapsed > count * 3) {
+                    clearInterval(iv);
+                    setTimeout(() => {
+                        document.getElementById('apply-progress').style.display = 'none';
+                        document.getElementById('apply-success').style.display = 'block';
+                        document.getElementById('success-message').textContent = `Submitted up to ${count} applications. Check the LinkedIn tab for details.`;
+                        btn.disabled = false;
+                        loadAnalytics();
+                        loadRecentJobs();
+                    }, 1500);
+                }
+            }, 500);
+        });
+    }
+
+    // ─── Helpers ───────────────────────────────────────────────────
+    function esc(s) {
+        if (s == null) return '';
+        return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    function formatTime(date) {
+        if (!date || isNaN(date)) return '—';
+        const diff = Date.now() - date.getTime();
+        const m = Math.floor(diff / 60000), h = Math.floor(diff / 3600000), d = Math.floor(diff / 86400000);
+        if (m < 1) return 'just now';
+        if (m < 60) return `${m}m ago`;
+        if (h < 24) return `${h}h ago`;
+        if (d < 7) return `${d}d ago`;
+        return date.toLocaleDateString();
+    }
+    function formatDate(d) {
+        if (!d || isNaN(d)) return '';
+        return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+</script>
+</body>
+</html>
