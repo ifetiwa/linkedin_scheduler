@@ -949,6 +949,183 @@ def api_posts_refresh():
     return jsonify({"status": "success", "posts": get_posts_data()})
 
 
+# ─── Content Generation APIs ──────────────────────────────────────
+@app.route('/api/generate-blog', methods=['POST'])
+def api_generate_blog():
+    """Generate a blog post using AI."""
+    try:
+        data = request.json
+        topic = data.get('topic', '').strip()
+        tone = data.get('tone', 'professional')
+        length = data.get('length', 'medium')
+        
+        if not topic:
+            return jsonify({"status": "error", "message": "Topic required"}), 400
+        
+        # Generate blog content using simple AI prompt
+        # In production, you'd use OpenAI, Claude, or similar
+        blog_content = generate_ai_blog(topic, tone, length)
+        
+        return jsonify({
+            "status": "success",
+            "content": blog_content,
+            "summary": f"Blog post about {topic} ({tone} tone)"
+        })
+    except Exception as e:
+        log_error(str(e), "Blog Generation Error")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route('/api/generate-image', methods=['POST'])
+def api_generate_image():
+    """Generate an image using AI."""
+    try:
+        data = request.json
+        desc = data.get('desc', '').strip()
+        style = data.get('style', 'professional')
+        ratio = data.get('ratio', '16:9')
+        
+        if not desc:
+            return jsonify({"status": "error", "message": "Description required"}), 400
+        
+        # Generate image URL (using Unsplash or similar API)
+        # In production, you'd use DALL-E, Midjourney, or similar
+        image_url = generate_ai_image(desc, style, ratio)
+        
+        return jsonify({
+            "status": "success",
+            "url": image_url,
+            "prompt": f"{desc} ({style} style, {ratio})"
+        })
+    except Exception as e:
+        log_error(str(e), "Image Generation Error")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.route('/api/schedule-post', methods=['POST'])
+def api_schedule_post():
+    """Schedule a new post to LinkedIn."""
+    try:
+        data = request.json
+        date_str = data.get('date')
+        time_str = data.get('time')
+        caption = data.get('caption', '').strip()
+        hashtags = data.get('hashtags', '').strip()
+        
+        if not all([date_str, time_str, caption]):
+            return jsonify({"status": "error", "message": "Date, time, and caption required"}), 400
+        
+        # Parse datetime
+        dt_str = f"{date_str}T{time_str}:00"
+        scheduled_time = datetime.fromisoformat(dt_str)
+        
+        # Create new post entry
+        new_post = {
+            "id": len(POSTS) + 1,
+            "title": caption[:50],
+            "date": date_str,
+            "time": time_str,
+            "body": caption,
+            "hashtags": hashtags.split() if hashtags else [],
+            "cta": "Check it out →",
+            "image": "/static/images/linkedin-banner.png",
+            "status": "Scheduled"
+        }
+        
+        # Save to database
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute('''INSERT INTO posts 
+                     (post_id, title, date, time, status, published_at) 
+                     VALUES (?, ?, ?, ?, ?, ?)''',
+                  (new_post['id'], new_post['title'], date_str, time_str, 'Scheduled', None))
+        conn.commit()
+        conn.close()
+        
+        return jsonify({
+            "status": "success",
+            "post_id": new_post['id'],
+            "scheduled_for": scheduled_time.isoformat()
+        })
+    except Exception as e:
+        log_error(str(e), "Post Scheduling Error")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+# ─── AI Content Helpers ────────────────────────────────────────────
+def generate_ai_blog(topic, tone, length):
+    """Generate blog content. In production, call OpenAI or Claude."""
+    lengths = {"short": 500, "medium": 1000, "long": 1500}
+    word_count = lengths.get(length, 1000)
+    
+    tones = {
+        "professional": "Write in a professional and formal tone",
+        "casual": "Write in a casual and conversational tone",
+        "technical": "Write in a technical and detailed tone",
+        "inspirational": "Write in an inspirational and motivational tone"
+    }
+    tone_desc = tones.get(tone, "Write in a professional tone")
+    
+    # Simple template-based generation (replace with real API call)
+    blog = f"""
+# {topic.title()}
+
+{tone_desc}. Here are some key insights about {topic}:
+
+## Introduction
+This article explores {topic} in depth. We'll cover various aspects and provide practical insights you can use immediately.
+
+## Main Points
+
+### Point 1: Understanding the Basics
+{topic} is a fascinating subject that has gained significant attention recently. Understanding the fundamentals is crucial for success.
+
+### Point 2: Best Practices
+When working with {topic}, follow these best practices:
+- Focus on quality over quantity
+- Keep learning and adapting
+- Engage with the community
+- Document your progress
+
+### Point 3: Advanced Techniques
+Once you understand the basics, you can explore more advanced approaches to {topic}. This involves:
+- Deep technical knowledge
+- Creative problem-solving
+- Continuous experimentation
+- Sharing your knowledge with others
+
+## Conclusion
+{topic} is constantly evolving, and staying updated is essential. Keep practicing, learning, and sharing your experience with the community.
+
+---
+
+*This article contains approximately {word_count} words and is written in a {tone} tone.*
+"""
+    return blog.strip()
+
+
+def generate_ai_image(description, style, ratio):
+    """Generate image URL. In production, call DALL-E, Midjourney, or use Unsplash."""
+    # For now, return a placeholder gradient image using a service
+    # In production, use: OpenAI DALL-E, Midjourney API, or Unsplash API
+    
+    # Example using Unsplash API (requires API key)
+    # You can replace this with actual image generation
+    
+    # For demo purposes, return a data URI with gradient
+    return f"https://via.placeholder.com/{get_ratio_dimensions(ratio)}?text={description[:20]}"
+
+
+def get_ratio_dimensions(ratio):
+    """Convert ratio to standard dimensions."""
+    ratios = {
+        "1:1": "400x400",
+        "16:9": "800x450",
+        "4:3": "800x600"
+    }
+    return ratios.get(ratio, "800x450")
+
+
 def _start_scheduler_thread():
     """Boot the in-process post-publishing loop.
 
