@@ -3198,5 +3198,45 @@
     "location": "Remote (Australia)",
     "timestamp": "2026-05-06T12:19:27.394589",
     "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "solutions architect|top hat": {
+    "job_id": "job_Solutions_Architect_Top_Hat",
+    "title": "Solutions Architect",
+    "company": "Top Hat",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-06T16:56:43.160166",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "staff engineer|top hat": {
+    "job_id": "job_Staff_Engineer_Top_Hat",
+    "title": "Staff Engineer",
+    "company": "Top Hat",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-06T16:56:45.160735",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "principal engineer|top hat": {
+    "job_id": "job_Principal_Engineer_Top_Hat",
+    "title": "Principal Engineer",
+    "company": "Top Hat",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-06T16:56:47.161052",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "python developer|top hat": {
+    "job_id": "job_Python_Developer_Top_Hat",
+    "title": "Python Developer",
+    "company": "Top Hat",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-06T16:56:49.162042",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "typescript engineer|top hat": {
+    "job_id": "job_TypeScript_Engineer_Top_Hat",
+    "title": "TypeScript Engineer",
+    "company": "Top Hat",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-06T16:56:51.163248",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
   }
 }
