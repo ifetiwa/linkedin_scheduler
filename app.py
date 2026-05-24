@@ -16,7 +16,8 @@ import threading
 import time
 from scheduler import (
     POSTS, RESUME_PROFILE, generate_cover_letter,
-    search_and_apply_easy_apply_jobs, LINKEDIN_TOKEN, LINKEDIN_URN
+    search_and_apply_easy_apply_jobs, LINKEDIN_TOKEN, LINKEDIN_URN,
+    get_posts, save_post_override, is_published,
 )
 
 # State directory — env-overridable so prod (Render persistent disk) can
@@ -308,28 +309,34 @@ def get_live_jobs():
 # ─── Analytics & Data Functions ───────────────────────────────────────────────
 
 def get_posts_data():
-    """Get all posts with status."""
+    """Get all posts (POSTS merged with user overrides) plus computed status."""
     posts_data = []
     today = date.today().isoformat()
-    
-    for post in POSTS:
-        if post["date"] < today:
+
+    for post in get_posts():
+        if is_published(post["id"]):
             status = "Published"
+        elif post["date"] < today:
+            status = "Past Due"
         elif post["date"] == today:
             status = "Today"
         else:
             status = "Scheduled"
-        
+
         posts_data.append({
             "id": post["id"],
             "title": post["title"],
+            "body": post.get("body", ""),
             "date": post["date"],
             "time": post["time"],
             "status": status,
             "image": post["image"],
-            "company": post.get("company", "")
+            "hashtags": post.get("hashtags", ""),
+            "first_comment": post.get("first_comment", ""),
         })
-    
+
+    # Sort by date+time so newly-edited dates land in the right place
+    posts_data.sort(key=lambda p: (p["date"], p["time"]))
     return posts_data
 
 def get_jobs_data():
@@ -556,6 +563,46 @@ def run_job_applications(count):
         
     except Exception as e:
         log_error(f"Background job application error: {str(e)}", "Job Application Error")
+
+@app.route('/api/posts/<int:post_id>', methods=['GET'])
+def api_get_single_post(post_id):
+    """Return the full editable record for a post (used by the edit modal)."""
+    post = next((p for p in get_posts_data() if p["id"] == post_id), None)
+    if not post:
+        return jsonify({"status": "error", "message": "Not found"}), 404
+    return jsonify(post)
+
+
+@app.route('/api/posts/<int:post_id>', methods=['PUT'])
+def api_update_post(post_id):
+    """Persist an edited post. Fields not provided are left alone."""
+    try:
+        body = request.json or {}
+        # Whitelist what UI can change; ignore everything else
+        allowed = ("title", "body", "date", "time", "hashtags", "first_comment")
+        patch = {k: body[k] for k in allowed if k in body}
+        if not patch:
+            return jsonify({"status": "error", "message": "No editable fields supplied"}), 400
+        # Basic validation
+        if "date" in patch and len(patch["date"]) != 10:
+            return jsonify({"status": "error", "message": "date must be YYYY-MM-DD"}), 400
+        if "time" in patch and len(patch["time"]) != 5:
+            return jsonify({"status": "error", "message": "time must be HH:MM"}), 400
+        # Verify the post exists in the base list
+        if not any(p["id"] == post_id for p in get_posts()):
+            return jsonify({"status": "error", "message": "Post not found"}), 404
+        saved = save_post_override(post_id, patch)
+        # Re-register the schedule so the time/date change takes effect now
+        try:
+            from scheduler import schedule_all
+            schedule_all()
+        except Exception as e:
+            log_error(f"schedule_all after edit failed: {e}", "Schedule Reload Error")
+        return jsonify({"status": "ok", "override": saved})
+    except Exception as e:
+        log_error(str(e), "Post Edit Error")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 
 @app.route('/api/posts/<int:post_id>/publish', methods=['POST'])
 def publish_post_now(post_id):

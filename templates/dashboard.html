@@ -261,6 +261,7 @@
         }
         .badge.published { background: #D1FAE5; color: #065F46; }
         .badge.scheduled { background: #DBEAFE; color: #1E40AF; }
+        .badge.past-due { background: #FEE2E2; color: #991B1B; }
         .badge.today    { background: #FEF3C7; color: #92400E; }
         .badge.applied  { background: #E0E7FF; color: #3730A3; }
         .badge.gray     { background: #F1F5F9; color: #475569; }
@@ -695,6 +696,51 @@
             </div>
         </div>
 
+        <!-- ─── Edit Post Modal ─── -->
+        <div class="modal-backdrop" id="ep-modal" style="display:none;">
+            <div class="modal" style="max-width: 720px;">
+                <div class="modal-head">
+                    <div>
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Edit Post</div>
+                        <h3 id="ep-id" style="margin: 4px 0 0; font-size: 18px;">—</h3>
+                    </div>
+                    <button class="btn btn-ghost btn-icon" onclick="closeEditPost()"><i class="fas fa-xmark"></i></button>
+                </div>
+                <div class="modal-body" style="display: grid; gap: 14px;">
+                    <div class="field">
+                        <label>Title</label>
+                        <input type="text" class="input" id="ep-title" maxlength="200">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 160px; gap: 12px;">
+                        <div class="field">
+                            <label>Date (YYYY-MM-DD)</label>
+                            <input type="date" class="input" id="ep-date">
+                        </div>
+                        <div class="field">
+                            <label>Time (HH:MM)</label>
+                            <input type="time" class="input" id="ep-time">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Body</label>
+                        <textarea class="input" id="ep-body" style="min-height: 240px; font-family: 'Inter', sans-serif; line-height: 1.55;"></textarea>
+                    </div>
+                    <div class="field">
+                        <label>Hashtags</label>
+                        <input type="text" class="input" id="ep-hashtags" placeholder="#FullStackDeveloper #SoftwareEngineering …">
+                    </div>
+                    <div class="field">
+                        <label>First Comment (posted automatically — LinkedIn favors links here)</label>
+                        <input type="text" class="input" id="ep-first-comment">
+                    </div>
+                </div>
+                <div class="modal-foot">
+                    <button class="btn btn-ghost" onclick="closeEditPost()">Cancel</button>
+                    <button class="btn btn-primary" id="ep-save-btn" onclick="saveEditPost()"><i class="fas fa-check"></i> Save changes</button>
+                </div>
+            </div>
+        </div>
+
         <!-- =========== GENERATE CONTENT =========== -->
         <section class="page" id="page-generate">
             <div class="page-header">
@@ -985,7 +1031,7 @@
                 const d = new Date(p.date + 'T00:00:00');
                 const day = d.getDate();
                 const month = d.toLocaleString('en-US', { month: 'short' });
-                const statusKey = p.status.toLowerCase();
+                const statusKey = p.status.toLowerCase().replace(/\s+/g, '-');
                 return `
                     <div class="post-row">
                         <div class="post-date">
@@ -1000,6 +1046,7 @@
                             </div>
                         </div>
                         <div class="post-actions">
+                            <button class="btn btn-ghost btn-sm" title="Edit post" onclick="openEditPost(${p.id})"><i class="fas fa-pen-to-square"></i> Edit</button>
                             <button class="btn btn-ghost btn-sm" title="Refresh status" onclick="refreshPost(${p.id}, this)"><i class="fas fa-arrows-rotate"></i></button>
                             <button class="btn btn-primary btn-sm" onclick="postNow(${p.id}, this)"><i class="fas fa-paper-plane"></i> Post Now</button>
                         </div>
@@ -1035,6 +1082,68 @@
             })
             .catch(e => toast('Error: ' + e.message))
             .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Post Now'; });
+    }
+
+    // ─── Edit Post ─────────────────────────────────────────────────
+    let _epCurrentId = null;
+
+    function openEditPost(id) {
+        _epCurrentId = id;
+        document.getElementById('ep-id').textContent = `Post #${id}`;
+        // Reset fields and show loading state
+        ['ep-title','ep-body','ep-hashtags','ep-first-comment'].forEach(k => document.getElementById(k).value = '');
+        document.getElementById('ep-date').value = '';
+        document.getElementById('ep-time').value = '';
+        document.getElementById('ep-modal').style.display = 'flex';
+        fetch('/api/posts/' + id)
+            .then(r => { if (!r.ok) throw new Error('Post not found'); return r.json(); })
+            .then(p => {
+                document.getElementById('ep-id').textContent = `Post #${p.id} · ${p.title.slice(0, 60)}`;
+                document.getElementById('ep-title').value = p.title || '';
+                document.getElementById('ep-date').value = p.date || '';
+                document.getElementById('ep-time').value = p.time || '';
+                document.getElementById('ep-body').value = p.body || '';
+                document.getElementById('ep-hashtags').value = p.hashtags || '';
+                document.getElementById('ep-first-comment').value = p.first_comment || '';
+            })
+            .catch(e => toast('Load failed: ' + e.message));
+    }
+
+    function closeEditPost() {
+        document.getElementById('ep-modal').style.display = 'none';
+        _epCurrentId = null;
+    }
+
+    function saveEditPost() {
+        if (!_epCurrentId) return;
+        const btn = document.getElementById('ep-save-btn');
+        const payload = {
+            title:         document.getElementById('ep-title').value.trim(),
+            date:          document.getElementById('ep-date').value,
+            time:          document.getElementById('ep-time').value,
+            body:          document.getElementById('ep-body').value,
+            hashtags:      document.getElementById('ep-hashtags').value.trim(),
+            first_comment: document.getElementById('ep-first-comment').value.trim(),
+        };
+        btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving…';
+        fetch('/api/posts/' + _epCurrentId, {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(payload),
+        })
+        .then(r => r.json())
+        .then(d => {
+            if (d.status === 'ok') {
+                toast('Post updated');
+                closeEditPost();
+                loadPosts(true);
+                loadAnalytics();
+            } else {
+                toast('Save failed: ' + (d.message || 'unknown'));
+            }
+        })
+        .catch(e => toast('Error: ' + e.message))
+        .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-check"></i> Save changes'; });
     }
 
     // ─── LinkedIn Jobs ─────────────────────────────────────────────

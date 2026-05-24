@@ -3238,5 +3238,2405 @@
     "location": "Remote (USA)",
     "timestamp": "2026-05-06T16:56:51.163248",
     "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "platform engineer|top hat": {
+    "job_id": "job_Platform_Engineer_Top_Hat",
+    "title": "Platform Engineer",
+    "company": "Top Hat",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.548002",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "devops engineer|top hat": {
+    "job_id": "job_DevOps_Engineer_Top_Hat",
+    "title": "DevOps Engineer",
+    "company": "Top Hat",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.548100",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "cloud engineer|top hat": {
+    "job_id": "job_Cloud_Engineer_Top_Hat",
+    "title": "Cloud Engineer",
+    "company": "Top Hat",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.548186",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "security engineer|top hat": {
+    "job_id": "job_Security_Engineer_Top_Hat",
+    "title": "Security Engineer",
+    "company": "Top Hat",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.548360",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "site reliability engineer|top hat": {
+    "job_id": "job_Site_Reliability_Engineer_Top_Hat",
+    "title": "Site Reliability Engineer",
+    "company": "Top Hat",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.548458",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "mobile engineer|top hat": {
+    "job_id": "job_Mobile_Engineer_Top_Hat",
+    "title": "Mobile Engineer",
+    "company": "Top Hat",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.548543",
+    "cover_letter_preview": "Dear Hiring Manager at Top Hat,\n\nI am writing to express my strong interest in t..."
+  },
+  "senior full stack developer|atlassian": {
+    "job_id": "job_Senior_Full_Stack_Developer_Atlassian",
+    "title": "Senior Full Stack Developer",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.548635",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "senior software engineer|atlassian": {
+    "job_id": "job_Senior_Software_Engineer_Atlassian",
+    "title": "Senior Software Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.548715",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "full stack engineer|atlassian": {
+    "job_id": "job_Full_Stack_Engineer_Atlassian",
+    "title": "Full Stack Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.548793",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "react developer|atlassian": {
+    "job_id": "job_React_Developer_Atlassian",
+    "title": "React Developer",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.548871",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "node.js developer|atlassian": {
+    "job_id": "job_Node.js_Developer_Atlassian",
+    "title": "Node.js Developer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.548948",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "engineering manager|atlassian": {
+    "job_id": "job_Engineering_Manager_Atlassian",
+    "title": "Engineering Manager",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.549024",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "tech lead|atlassian": {
+    "job_id": "job_Tech_Lead_Atlassian",
+    "title": "Tech Lead",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.549102",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "backend engineer|atlassian": {
+    "job_id": "job_Backend_Engineer_Atlassian",
+    "title": "Backend Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.549178",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "frontend engineer|atlassian": {
+    "job_id": "job_Frontend_Engineer_Atlassian",
+    "title": "Frontend Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.549275",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "solutions architect|atlassian": {
+    "job_id": "job_Solutions_Architect_Atlassian",
+    "title": "Solutions Architect",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.549349",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "staff engineer|atlassian": {
+    "job_id": "job_Staff_Engineer_Atlassian",
+    "title": "Staff Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.549426",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "principal engineer|atlassian": {
+    "job_id": "job_Principal_Engineer_Atlassian",
+    "title": "Principal Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.549503",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "python developer|atlassian": {
+    "job_id": "job_Python_Developer_Atlassian",
+    "title": "Python Developer",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.549576",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "typescript engineer|atlassian": {
+    "job_id": "job_TypeScript_Engineer_Atlassian",
+    "title": "TypeScript Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.549653",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "platform engineer|atlassian": {
+    "job_id": "job_Platform_Engineer_Atlassian",
+    "title": "Platform Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.549724",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "devops engineer|atlassian": {
+    "job_id": "job_DevOps_Engineer_Atlassian",
+    "title": "DevOps Engineer",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.549798",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "cloud engineer|atlassian": {
+    "job_id": "job_Cloud_Engineer_Atlassian",
+    "title": "Cloud Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.549869",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "security engineer|atlassian": {
+    "job_id": "job_Security_Engineer_Atlassian",
+    "title": "Security Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.549939",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "site reliability engineer|atlassian": {
+    "job_id": "job_Site_Reliability_Engineer_Atlassian",
+    "title": "Site Reliability Engineer",
+    "company": "Atlassian",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.550026",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "mobile engineer|atlassian": {
+    "job_id": "job_Mobile_Engineer_Atlassian",
+    "title": "Mobile Engineer",
+    "company": "Atlassian",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.550098",
+    "cover_letter_preview": "Dear Hiring Manager at Atlassian,\n\nI am writing to express my strong interest in..."
+  },
+  "tech lead|canva": {
+    "job_id": "job_Tech_Lead_Canva",
+    "title": "Tech Lead",
+    "company": "Canva",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.550274",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "backend engineer|canva": {
+    "job_id": "job_Backend_Engineer_Canva",
+    "title": "Backend Engineer",
+    "company": "Canva",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.550377",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "frontend engineer|canva": {
+    "job_id": "job_Frontend_Engineer_Canva",
+    "title": "Frontend Engineer",
+    "company": "Canva",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.550449",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "solutions architect|canva": {
+    "job_id": "job_Solutions_Architect_Canva",
+    "title": "Solutions Architect",
+    "company": "Canva",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.550520",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "staff engineer|canva": {
+    "job_id": "job_Staff_Engineer_Canva",
+    "title": "Staff Engineer",
+    "company": "Canva",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.550600",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "principal engineer|canva": {
+    "job_id": "job_Principal_Engineer_Canva",
+    "title": "Principal Engineer",
+    "company": "Canva",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.550670",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "python developer|canva": {
+    "job_id": "job_Python_Developer_Canva",
+    "title": "Python Developer",
+    "company": "Canva",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.550743",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "typescript engineer|canva": {
+    "job_id": "job_TypeScript_Engineer_Canva",
+    "title": "TypeScript Engineer",
+    "company": "Canva",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.550815",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "platform engineer|canva": {
+    "job_id": "job_Platform_Engineer_Canva",
+    "title": "Platform Engineer",
+    "company": "Canva",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.550883",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "devops engineer|canva": {
+    "job_id": "job_DevOps_Engineer_Canva",
+    "title": "DevOps Engineer",
+    "company": "Canva",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.550951",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "cloud engineer|canva": {
+    "job_id": "job_Cloud_Engineer_Canva",
+    "title": "Cloud Engineer",
+    "company": "Canva",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551022",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "security engineer|canva": {
+    "job_id": "job_Security_Engineer_Canva",
+    "title": "Security Engineer",
+    "company": "Canva",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.551092",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "site reliability engineer|canva": {
+    "job_id": "job_Site_Reliability_Engineer_Canva",
+    "title": "Site Reliability Engineer",
+    "company": "Canva",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.551163",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "mobile engineer|canva": {
+    "job_id": "job_Mobile_Engineer_Canva",
+    "title": "Mobile Engineer",
+    "company": "Canva",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551230",
+    "cover_letter_preview": "Dear Hiring Manager at Canva,\n\nI am writing to express my strong interest in the..."
+  },
+  "senior full stack developer|safetyculture": {
+    "job_id": "job_Senior_Full_Stack_Developer_SafetyCulture",
+    "title": "Senior Full Stack Developer",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551322",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "senior software engineer|safetyculture": {
+    "job_id": "job_Senior_Software_Engineer_SafetyCulture",
+    "title": "Senior Software Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.551398",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "full stack engineer|safetyculture": {
+    "job_id": "job_Full_Stack_Engineer_SafetyCulture",
+    "title": "Full Stack Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.551473",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "react developer|safetyculture": {
+    "job_id": "job_React_Developer_SafetyCulture",
+    "title": "React Developer",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551540",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "node.js developer|safetyculture": {
+    "job_id": "job_Node.js_Developer_SafetyCulture",
+    "title": "Node.js Developer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.551607",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "engineering manager|safetyculture": {
+    "job_id": "job_Engineering_Manager_SafetyCulture",
+    "title": "Engineering Manager",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.551677",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "tech lead|safetyculture": {
+    "job_id": "job_Tech_Lead_SafetyCulture",
+    "title": "Tech Lead",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551749",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "backend engineer|safetyculture": {
+    "job_id": "job_Backend_Engineer_SafetyCulture",
+    "title": "Backend Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.551818",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "frontend engineer|safetyculture": {
+    "job_id": "job_Frontend_Engineer_SafetyCulture",
+    "title": "Frontend Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.551885",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "solutions architect|safetyculture": {
+    "job_id": "job_Solutions_Architect_SafetyCulture",
+    "title": "Solutions Architect",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.551955",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "staff engineer|safetyculture": {
+    "job_id": "job_Staff_Engineer_SafetyCulture",
+    "title": "Staff Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.552034",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "principal engineer|safetyculture": {
+    "job_id": "job_Principal_Engineer_SafetyCulture",
+    "title": "Principal Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.552102",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "python developer|safetyculture": {
+    "job_id": "job_Python_Developer_SafetyCulture",
+    "title": "Python Developer",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.552169",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "typescript engineer|safetyculture": {
+    "job_id": "job_TypeScript_Engineer_SafetyCulture",
+    "title": "TypeScript Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.552238",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "platform engineer|safetyculture": {
+    "job_id": "job_Platform_Engineer_SafetyCulture",
+    "title": "Platform Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.552319",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "devops engineer|safetyculture": {
+    "job_id": "job_DevOps_Engineer_SafetyCulture",
+    "title": "DevOps Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.552391",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "cloud engineer|safetyculture": {
+    "job_id": "job_Cloud_Engineer_SafetyCulture",
+    "title": "Cloud Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.552456",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "security engineer|safetyculture": {
+    "job_id": "job_Security_Engineer_SafetyCulture",
+    "title": "Security Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.558115",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "site reliability engineer|safetyculture": {
+    "job_id": "job_Site_Reliability_Engineer_SafetyCulture",
+    "title": "Site Reliability Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.558262",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "mobile engineer|safetyculture": {
+    "job_id": "job_Mobile_Engineer_SafetyCulture",
+    "title": "Mobile Engineer",
+    "company": "SafetyCulture",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.558352",
+    "cover_letter_preview": "Dear Hiring Manager at SafetyCulture,\n\nI am writing to express my strong interes..."
+  },
+  "senior full stack developer|culture amp": {
+    "job_id": "job_Senior_Full_Stack_Developer_Culture_Amp",
+    "title": "Senior Full Stack Developer",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.558435",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "senior software engineer|culture amp": {
+    "job_id": "job_Senior_Software_Engineer_Culture_Amp",
+    "title": "Senior Software Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.558536",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "full stack engineer|culture amp": {
+    "job_id": "job_Full_Stack_Engineer_Culture_Amp",
+    "title": "Full Stack Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.558607",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "react developer|culture amp": {
+    "job_id": "job_React_Developer_Culture_Amp",
+    "title": "React Developer",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.558676",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "node.js developer|culture amp": {
+    "job_id": "job_Node.js_Developer_Culture_Amp",
+    "title": "Node.js Developer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.558753",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "engineering manager|culture amp": {
+    "job_id": "job_Engineering_Manager_Culture_Amp",
+    "title": "Engineering Manager",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.558826",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "tech lead|culture amp": {
+    "job_id": "job_Tech_Lead_Culture_Amp",
+    "title": "Tech Lead",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.558895",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "backend engineer|culture amp": {
+    "job_id": "job_Backend_Engineer_Culture_Amp",
+    "title": "Backend Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.559086",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "frontend engineer|culture amp": {
+    "job_id": "job_Frontend_Engineer_Culture_Amp",
+    "title": "Frontend Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.559539",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "solutions architect|culture amp": {
+    "job_id": "job_Solutions_Architect_Culture_Amp",
+    "title": "Solutions Architect",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.559705",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "staff engineer|culture amp": {
+    "job_id": "job_Staff_Engineer_Culture_Amp",
+    "title": "Staff Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.559777",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "principal engineer|culture amp": {
+    "job_id": "job_Principal_Engineer_Culture_Amp",
+    "title": "Principal Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.559850",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "python developer|culture amp": {
+    "job_id": "job_Python_Developer_Culture_Amp",
+    "title": "Python Developer",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.559920",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "typescript engineer|culture amp": {
+    "job_id": "job_TypeScript_Engineer_Culture_Amp",
+    "title": "TypeScript Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.559987",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "platform engineer|culture amp": {
+    "job_id": "job_Platform_Engineer_Culture_Amp",
+    "title": "Platform Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.560053",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "devops engineer|culture amp": {
+    "job_id": "job_DevOps_Engineer_Culture_Amp",
+    "title": "DevOps Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.560121",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "cloud engineer|culture amp": {
+    "job_id": "job_Cloud_Engineer_Culture_Amp",
+    "title": "Cloud Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.560186",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "security engineer|culture amp": {
+    "job_id": "job_Security_Engineer_Culture_Amp",
+    "title": "Security Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.560254",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "site reliability engineer|culture amp": {
+    "job_id": "job_Site_Reliability_Engineer_Culture_Amp",
+    "title": "Site Reliability Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.560332",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "mobile engineer|culture amp": {
+    "job_id": "job_Mobile_Engineer_Culture_Amp",
+    "title": "Mobile Engineer",
+    "company": "Culture Amp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.560395",
+    "cover_letter_preview": "Dear Hiring Manager at Culture Amp,\n\nI am writing to express my strong interest ..."
+  },
+  "senior full stack developer|octopus deploy": {
+    "job_id": "job_Senior_Full_Stack_Developer_Octopus_Deploy",
+    "title": "Senior Full Stack Developer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.560467",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "senior software engineer|octopus deploy": {
+    "job_id": "job_Senior_Software_Engineer_Octopus_Deploy",
+    "title": "Senior Software Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.560534",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "full stack engineer|octopus deploy": {
+    "job_id": "job_Full_Stack_Engineer_Octopus_Deploy",
+    "title": "Full Stack Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.560597",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "react developer|octopus deploy": {
+    "job_id": "job_React_Developer_Octopus_Deploy",
+    "title": "React Developer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.560661",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "node.js developer|octopus deploy": {
+    "job_id": "job_Node.js_Developer_Octopus_Deploy",
+    "title": "Node.js Developer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.560728",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "engineering manager|octopus deploy": {
+    "job_id": "job_Engineering_Manager_Octopus_Deploy",
+    "title": "Engineering Manager",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.560791",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "tech lead|octopus deploy": {
+    "job_id": "job_Tech_Lead_Octopus_Deploy",
+    "title": "Tech Lead",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.560855",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "backend engineer|octopus deploy": {
+    "job_id": "job_Backend_Engineer_Octopus_Deploy",
+    "title": "Backend Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.560918",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "frontend engineer|octopus deploy": {
+    "job_id": "job_Frontend_Engineer_Octopus_Deploy",
+    "title": "Frontend Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.560981",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "solutions architect|octopus deploy": {
+    "job_id": "job_Solutions_Architect_Octopus_Deploy",
+    "title": "Solutions Architect",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.561044",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "staff engineer|octopus deploy": {
+    "job_id": "job_Staff_Engineer_Octopus_Deploy",
+    "title": "Staff Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.561160",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "principal engineer|octopus deploy": {
+    "job_id": "job_Principal_Engineer_Octopus_Deploy",
+    "title": "Principal Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.561228",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "python developer|octopus deploy": {
+    "job_id": "job_Python_Developer_Octopus_Deploy",
+    "title": "Python Developer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.561292",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "typescript engineer|octopus deploy": {
+    "job_id": "job_TypeScript_Engineer_Octopus_Deploy",
+    "title": "TypeScript Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.561356",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "platform engineer|octopus deploy": {
+    "job_id": "job_Platform_Engineer_Octopus_Deploy",
+    "title": "Platform Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.561424",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "devops engineer|octopus deploy": {
+    "job_id": "job_DevOps_Engineer_Octopus_Deploy",
+    "title": "DevOps Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.561490",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "cloud engineer|octopus deploy": {
+    "job_id": "job_Cloud_Engineer_Octopus_Deploy",
+    "title": "Cloud Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.561563",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "security engineer|octopus deploy": {
+    "job_id": "job_Security_Engineer_Octopus_Deploy",
+    "title": "Security Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.561648",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "site reliability engineer|octopus deploy": {
+    "job_id": "job_Site_Reliability_Engineer_Octopus_Deploy",
+    "title": "Site Reliability Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.561724",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "mobile engineer|octopus deploy": {
+    "job_id": "job_Mobile_Engineer_Octopus_Deploy",
+    "title": "Mobile Engineer",
+    "company": "Octopus Deploy",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.561793",
+    "cover_letter_preview": "Dear Hiring Manager at Octopus Deploy,\n\nI am writing to express my strong intere..."
+  },
+  "backend engineer|stripe": {
+    "job_id": "job_Backend_Engineer_Stripe",
+    "title": "Backend Engineer",
+    "company": "Stripe",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.595008",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|stripe": {
+    "job_id": "job_Frontend_Engineer_Stripe",
+    "title": "Frontend Engineer",
+    "company": "Stripe",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.595094",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|stripe": {
+    "job_id": "job_Solutions_Architect_Stripe",
+    "title": "Solutions Architect",
+    "company": "Stripe",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.595171",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|stripe": {
+    "job_id": "job_Staff_Engineer_Stripe",
+    "title": "Staff Engineer",
+    "company": "Stripe",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.595249",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|stripe": {
+    "job_id": "job_Principal_Engineer_Stripe",
+    "title": "Principal Engineer",
+    "company": "Stripe",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.595340",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|stripe": {
+    "job_id": "job_Python_Developer_Stripe",
+    "title": "Python Developer",
+    "company": "Stripe",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.595415",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|stripe": {
+    "job_id": "job_TypeScript_Engineer_Stripe",
+    "title": "TypeScript Engineer",
+    "company": "Stripe",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.595491",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|stripe": {
+    "job_id": "job_Platform_Engineer_Stripe",
+    "title": "Platform Engineer",
+    "company": "Stripe",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.595565",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|stripe": {
+    "job_id": "job_DevOps_Engineer_Stripe",
+    "title": "DevOps Engineer",
+    "company": "Stripe",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.595640",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|stripe": {
+    "job_id": "job_Cloud_Engineer_Stripe",
+    "title": "Cloud Engineer",
+    "company": "Stripe",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.595714",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|stripe": {
+    "job_id": "job_Security_Engineer_Stripe",
+    "title": "Security Engineer",
+    "company": "Stripe",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.595789",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|stripe": {
+    "job_id": "job_Site_Reliability_Engineer_Stripe",
+    "title": "Site Reliability Engineer",
+    "company": "Stripe",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.595863",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|stripe": {
+    "job_id": "job_Mobile_Engineer_Stripe",
+    "title": "Mobile Engineer",
+    "company": "Stripe",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.595941",
+    "cover_letter_preview": "Dear Hiring Manager at Stripe,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|figma": {
+    "job_id": "job_Tech_Lead_Figma",
+    "title": "Tech Lead",
+    "company": "Figma",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.596031",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "backend engineer|figma": {
+    "job_id": "job_Backend_Engineer_Figma",
+    "title": "Backend Engineer",
+    "company": "Figma",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.596110",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "frontend engineer|figma": {
+    "job_id": "job_Frontend_Engineer_Figma",
+    "title": "Frontend Engineer",
+    "company": "Figma",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.596185",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "solutions architect|figma": {
+    "job_id": "job_Solutions_Architect_Figma",
+    "title": "Solutions Architect",
+    "company": "Figma",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.596261",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "staff engineer|figma": {
+    "job_id": "job_Staff_Engineer_Figma",
+    "title": "Staff Engineer",
+    "company": "Figma",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.596340",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "principal engineer|figma": {
+    "job_id": "job_Principal_Engineer_Figma",
+    "title": "Principal Engineer",
+    "company": "Figma",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.596416",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "python developer|figma": {
+    "job_id": "job_Python_Developer_Figma",
+    "title": "Python Developer",
+    "company": "Figma",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.596508",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "typescript engineer|figma": {
+    "job_id": "job_TypeScript_Engineer_Figma",
+    "title": "TypeScript Engineer",
+    "company": "Figma",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.596593",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "platform engineer|figma": {
+    "job_id": "job_Platform_Engineer_Figma",
+    "title": "Platform Engineer",
+    "company": "Figma",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.596673",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "devops engineer|figma": {
+    "job_id": "job_DevOps_Engineer_Figma",
+    "title": "DevOps Engineer",
+    "company": "Figma",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.596756",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "cloud engineer|figma": {
+    "job_id": "job_Cloud_Engineer_Figma",
+    "title": "Cloud Engineer",
+    "company": "Figma",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.596869",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "security engineer|figma": {
+    "job_id": "job_Security_Engineer_Figma",
+    "title": "Security Engineer",
+    "company": "Figma",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.596946",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "site reliability engineer|figma": {
+    "job_id": "job_Site_Reliability_Engineer_Figma",
+    "title": "Site Reliability Engineer",
+    "company": "Figma",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.597023",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "mobile engineer|figma": {
+    "job_id": "job_Mobile_Engineer_Figma",
+    "title": "Mobile Engineer",
+    "company": "Figma",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.597097",
+    "cover_letter_preview": "Dear Hiring Manager at Figma,\n\nI am writing to express my strong interest in the..."
+  },
+  "tech lead|notion": {
+    "job_id": "job_Tech_Lead_Notion",
+    "title": "Tech Lead",
+    "company": "Notion",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.597179",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|notion": {
+    "job_id": "job_Backend_Engineer_Notion",
+    "title": "Backend Engineer",
+    "company": "Notion",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.597255",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|notion": {
+    "job_id": "job_Frontend_Engineer_Notion",
+    "title": "Frontend Engineer",
+    "company": "Notion",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.597345",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|notion": {
+    "job_id": "job_Solutions_Architect_Notion",
+    "title": "Solutions Architect",
+    "company": "Notion",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.597426",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|notion": {
+    "job_id": "job_Staff_Engineer_Notion",
+    "title": "Staff Engineer",
+    "company": "Notion",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.597500",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|notion": {
+    "job_id": "job_Principal_Engineer_Notion",
+    "title": "Principal Engineer",
+    "company": "Notion",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.597572",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|notion": {
+    "job_id": "job_Python_Developer_Notion",
+    "title": "Python Developer",
+    "company": "Notion",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.597653",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|notion": {
+    "job_id": "job_TypeScript_Engineer_Notion",
+    "title": "TypeScript Engineer",
+    "company": "Notion",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.597726",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|notion": {
+    "job_id": "job_Platform_Engineer_Notion",
+    "title": "Platform Engineer",
+    "company": "Notion",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.597799",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|notion": {
+    "job_id": "job_DevOps_Engineer_Notion",
+    "title": "DevOps Engineer",
+    "company": "Notion",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.597875",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|notion": {
+    "job_id": "job_Cloud_Engineer_Notion",
+    "title": "Cloud Engineer",
+    "company": "Notion",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.597947",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|notion": {
+    "job_id": "job_Security_Engineer_Notion",
+    "title": "Security Engineer",
+    "company": "Notion",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.598019",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|notion": {
+    "job_id": "job_Site_Reliability_Engineer_Notion",
+    "title": "Site Reliability Engineer",
+    "company": "Notion",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.598092",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|notion": {
+    "job_id": "job_Mobile_Engineer_Notion",
+    "title": "Mobile Engineer",
+    "company": "Notion",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.598244",
+    "cover_letter_preview": "Dear Hiring Manager at Notion,\n\nI am writing to express my strong interest in th..."
+  },
+  "senior full stack developer|linear": {
+    "job_id": "job_Senior_Full_Stack_Developer_Linear",
+    "title": "Senior Full Stack Developer",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.598330",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "senior software engineer|linear": {
+    "job_id": "job_Senior_Software_Engineer_Linear",
+    "title": "Senior Software Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.598410",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "full stack engineer|linear": {
+    "job_id": "job_Full_Stack_Engineer_Linear",
+    "title": "Full Stack Engineer",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.598486",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "react developer|linear": {
+    "job_id": "job_React_Developer_Linear",
+    "title": "React Developer",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.598560",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "node.js developer|linear": {
+    "job_id": "job_Node.js_Developer_Linear",
+    "title": "Node.js Developer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.598633",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "engineering manager|linear": {
+    "job_id": "job_Engineering_Manager_Linear",
+    "title": "Engineering Manager",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.598716",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|linear": {
+    "job_id": "job_Tech_Lead_Linear",
+    "title": "Tech Lead",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.598792",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|linear": {
+    "job_id": "job_Backend_Engineer_Linear",
+    "title": "Backend Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.598875",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|linear": {
+    "job_id": "job_Frontend_Engineer_Linear",
+    "title": "Frontend Engineer",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.598948",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|linear": {
+    "job_id": "job_Solutions_Architect_Linear",
+    "title": "Solutions Architect",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.599025",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|linear": {
+    "job_id": "job_Staff_Engineer_Linear",
+    "title": "Staff Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.599098",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|linear": {
+    "job_id": "job_Principal_Engineer_Linear",
+    "title": "Principal Engineer",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.599174",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|linear": {
+    "job_id": "job_Python_Developer_Linear",
+    "title": "Python Developer",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.599247",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|linear": {
+    "job_id": "job_TypeScript_Engineer_Linear",
+    "title": "TypeScript Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.599344",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|linear": {
+    "job_id": "job_Platform_Engineer_Linear",
+    "title": "Platform Engineer",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.599417",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|linear": {
+    "job_id": "job_DevOps_Engineer_Linear",
+    "title": "DevOps Engineer",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.599491",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|linear": {
+    "job_id": "job_Cloud_Engineer_Linear",
+    "title": "Cloud Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.599567",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|linear": {
+    "job_id": "job_Security_Engineer_Linear",
+    "title": "Security Engineer",
+    "company": "Linear",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.599642",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|linear": {
+    "job_id": "job_Site_Reliability_Engineer_Linear",
+    "title": "Site Reliability Engineer",
+    "company": "Linear",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.599717",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|linear": {
+    "job_id": "job_Mobile_Engineer_Linear",
+    "title": "Mobile Engineer",
+    "company": "Linear",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.599791",
+    "cover_letter_preview": "Dear Hiring Manager at Linear,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|loom": {
+    "job_id": "job_Tech_Lead_Loom",
+    "title": "Tech Lead",
+    "company": "Loom",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.599872",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "backend engineer|loom": {
+    "job_id": "job_Backend_Engineer_Loom",
+    "title": "Backend Engineer",
+    "company": "Loom",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.599952",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "frontend engineer|loom": {
+    "job_id": "job_Frontend_Engineer_Loom",
+    "title": "Frontend Engineer",
+    "company": "Loom",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.600034",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "solutions architect|loom": {
+    "job_id": "job_Solutions_Architect_Loom",
+    "title": "Solutions Architect",
+    "company": "Loom",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.600273",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "staff engineer|loom": {
+    "job_id": "job_Staff_Engineer_Loom",
+    "title": "Staff Engineer",
+    "company": "Loom",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.600359",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "principal engineer|loom": {
+    "job_id": "job_Principal_Engineer_Loom",
+    "title": "Principal Engineer",
+    "company": "Loom",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.600448",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "python developer|loom": {
+    "job_id": "job_Python_Developer_Loom",
+    "title": "Python Developer",
+    "company": "Loom",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.600523",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "typescript engineer|loom": {
+    "job_id": "job_TypeScript_Engineer_Loom",
+    "title": "TypeScript Engineer",
+    "company": "Loom",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.600610",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "platform engineer|loom": {
+    "job_id": "job_Platform_Engineer_Loom",
+    "title": "Platform Engineer",
+    "company": "Loom",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.600685",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "devops engineer|loom": {
+    "job_id": "job_DevOps_Engineer_Loom",
+    "title": "DevOps Engineer",
+    "company": "Loom",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.600759",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "cloud engineer|loom": {
+    "job_id": "job_Cloud_Engineer_Loom",
+    "title": "Cloud Engineer",
+    "company": "Loom",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.600837",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "security engineer|loom": {
+    "job_id": "job_Security_Engineer_Loom",
+    "title": "Security Engineer",
+    "company": "Loom",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.600914",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "site reliability engineer|loom": {
+    "job_id": "job_Site_Reliability_Engineer_Loom",
+    "title": "Site Reliability Engineer",
+    "company": "Loom",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.600988",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "mobile engineer|loom": {
+    "job_id": "job_Mobile_Engineer_Loom",
+    "title": "Mobile Engineer",
+    "company": "Loom",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.601063",
+    "cover_letter_preview": "Dear Hiring Manager at Loom,\n\nI am writing to express my strong interest in the ..."
+  },
+  "senior full stack developer|vercel": {
+    "job_id": "job_Senior_Full_Stack_Developer_Vercel",
+    "title": "Senior Full Stack Developer",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.601137",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "senior software engineer|vercel": {
+    "job_id": "job_Senior_Software_Engineer_Vercel",
+    "title": "Senior Software Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.601212",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "full stack engineer|vercel": {
+    "job_id": "job_Full_Stack_Engineer_Vercel",
+    "title": "Full Stack Engineer",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.601289",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "react developer|vercel": {
+    "job_id": "job_React_Developer_Vercel",
+    "title": "React Developer",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.601363",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "node.js developer|vercel": {
+    "job_id": "job_Node.js_Developer_Vercel",
+    "title": "Node.js Developer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.601437",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "engineering manager|vercel": {
+    "job_id": "job_Engineering_Manager_Vercel",
+    "title": "Engineering Manager",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.601511",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|vercel": {
+    "job_id": "job_Tech_Lead_Vercel",
+    "title": "Tech Lead",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.601588",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|vercel": {
+    "job_id": "job_Backend_Engineer_Vercel",
+    "title": "Backend Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.601662",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|vercel": {
+    "job_id": "job_Frontend_Engineer_Vercel",
+    "title": "Frontend Engineer",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.601735",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|vercel": {
+    "job_id": "job_Solutions_Architect_Vercel",
+    "title": "Solutions Architect",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.601820",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|vercel": {
+    "job_id": "job_Staff_Engineer_Vercel",
+    "title": "Staff Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.601973",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|vercel": {
+    "job_id": "job_Principal_Engineer_Vercel",
+    "title": "Principal Engineer",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.602058",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|vercel": {
+    "job_id": "job_Python_Developer_Vercel",
+    "title": "Python Developer",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.602140",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|vercel": {
+    "job_id": "job_TypeScript_Engineer_Vercel",
+    "title": "TypeScript Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.602218",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|vercel": {
+    "job_id": "job_Platform_Engineer_Vercel",
+    "title": "Platform Engineer",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.602296",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|vercel": {
+    "job_id": "job_DevOps_Engineer_Vercel",
+    "title": "DevOps Engineer",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.602374",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|vercel": {
+    "job_id": "job_Cloud_Engineer_Vercel",
+    "title": "Cloud Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.602457",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|vercel": {
+    "job_id": "job_Security_Engineer_Vercel",
+    "title": "Security Engineer",
+    "company": "Vercel",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.602534",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|vercel": {
+    "job_id": "job_Site_Reliability_Engineer_Vercel",
+    "title": "Site Reliability Engineer",
+    "company": "Vercel",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.602614",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|vercel": {
+    "job_id": "job_Mobile_Engineer_Vercel",
+    "title": "Mobile Engineer",
+    "company": "Vercel",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.602692",
+    "cover_letter_preview": "Dear Hiring Manager at Vercel,\n\nI am writing to express my strong interest in th..."
+  },
+  "senior full stack developer|netlify": {
+    "job_id": "job_Senior_Full_Stack_Developer_Netlify",
+    "title": "Senior Full Stack Developer",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.602775",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "senior software engineer|netlify": {
+    "job_id": "job_Senior_Software_Engineer_Netlify",
+    "title": "Senior Software Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.602858",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "full stack engineer|netlify": {
+    "job_id": "job_Full_Stack_Engineer_Netlify",
+    "title": "Full Stack Engineer",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.602936",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "react developer|netlify": {
+    "job_id": "job_React_Developer_Netlify",
+    "title": "React Developer",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.603015",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "node.js developer|netlify": {
+    "job_id": "job_Node.js_Developer_Netlify",
+    "title": "Node.js Developer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.603090",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "engineering manager|netlify": {
+    "job_id": "job_Engineering_Manager_Netlify",
+    "title": "Engineering Manager",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.634948",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "tech lead|netlify": {
+    "job_id": "job_Tech_Lead_Netlify",
+    "title": "Tech Lead",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.635035",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "backend engineer|netlify": {
+    "job_id": "job_Backend_Engineer_Netlify",
+    "title": "Backend Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.635168",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "frontend engineer|netlify": {
+    "job_id": "job_Frontend_Engineer_Netlify",
+    "title": "Frontend Engineer",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.635274",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "solutions architect|netlify": {
+    "job_id": "job_Solutions_Architect_Netlify",
+    "title": "Solutions Architect",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.635350",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "staff engineer|netlify": {
+    "job_id": "job_Staff_Engineer_Netlify",
+    "title": "Staff Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.635431",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "principal engineer|netlify": {
+    "job_id": "job_Principal_Engineer_Netlify",
+    "title": "Principal Engineer",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.635538",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "python developer|netlify": {
+    "job_id": "job_Python_Developer_Netlify",
+    "title": "Python Developer",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.635648",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "typescript engineer|netlify": {
+    "job_id": "job_TypeScript_Engineer_Netlify",
+    "title": "TypeScript Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.635791",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "platform engineer|netlify": {
+    "job_id": "job_Platform_Engineer_Netlify",
+    "title": "Platform Engineer",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.635895",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "devops engineer|netlify": {
+    "job_id": "job_DevOps_Engineer_Netlify",
+    "title": "DevOps Engineer",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.636032",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "cloud engineer|netlify": {
+    "job_id": "job_Cloud_Engineer_Netlify",
+    "title": "Cloud Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.636143",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "security engineer|netlify": {
+    "job_id": "job_Security_Engineer_Netlify",
+    "title": "Security Engineer",
+    "company": "Netlify",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.636217",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "site reliability engineer|netlify": {
+    "job_id": "job_Site_Reliability_Engineer_Netlify",
+    "title": "Site Reliability Engineer",
+    "company": "Netlify",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.636290",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "mobile engineer|netlify": {
+    "job_id": "job_Mobile_Engineer_Netlify",
+    "title": "Mobile Engineer",
+    "company": "Netlify",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.636405",
+    "cover_letter_preview": "Dear Hiring Manager at Netlify,\n\nI am writing to express my strong interest in t..."
+  },
+  "senior full stack developer|render": {
+    "job_id": "job_Senior_Full_Stack_Developer_Render",
+    "title": "Senior Full Stack Developer",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.636497",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "senior software engineer|render": {
+    "job_id": "job_Senior_Software_Engineer_Render",
+    "title": "Senior Software Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.636573",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "full stack engineer|render": {
+    "job_id": "job_Full_Stack_Engineer_Render",
+    "title": "Full Stack Engineer",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.636650",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "react developer|render": {
+    "job_id": "job_React_Developer_Render",
+    "title": "React Developer",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.636724",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "node.js developer|render": {
+    "job_id": "job_Node.js_Developer_Render",
+    "title": "Node.js Developer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.636799",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "engineering manager|render": {
+    "job_id": "job_Engineering_Manager_Render",
+    "title": "Engineering Manager",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.636894",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|render": {
+    "job_id": "job_Tech_Lead_Render",
+    "title": "Tech Lead",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.636979",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|render": {
+    "job_id": "job_Backend_Engineer_Render",
+    "title": "Backend Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.637060",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|render": {
+    "job_id": "job_Frontend_Engineer_Render",
+    "title": "Frontend Engineer",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.637142",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|render": {
+    "job_id": "job_Solutions_Architect_Render",
+    "title": "Solutions Architect",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.637253",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|render": {
+    "job_id": "job_Staff_Engineer_Render",
+    "title": "Staff Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.637377",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|render": {
+    "job_id": "job_Principal_Engineer_Render",
+    "title": "Principal Engineer",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.637499",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|render": {
+    "job_id": "job_Python_Developer_Render",
+    "title": "Python Developer",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.637591",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|render": {
+    "job_id": "job_TypeScript_Engineer_Render",
+    "title": "TypeScript Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.637702",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|render": {
+    "job_id": "job_Platform_Engineer_Render",
+    "title": "Platform Engineer",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.637826",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|render": {
+    "job_id": "job_DevOps_Engineer_Render",
+    "title": "DevOps Engineer",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.638094",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|render": {
+    "job_id": "job_Cloud_Engineer_Render",
+    "title": "Cloud Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.638341",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|render": {
+    "job_id": "job_Security_Engineer_Render",
+    "title": "Security Engineer",
+    "company": "Render",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.638575",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|render": {
+    "job_id": "job_Site_Reliability_Engineer_Render",
+    "title": "Site Reliability Engineer",
+    "company": "Render",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.639099",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|render": {
+    "job_id": "job_Mobile_Engineer_Render",
+    "title": "Mobile Engineer",
+    "company": "Render",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.639498",
+    "cover_letter_preview": "Dear Hiring Manager at Render,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|github": {
+    "job_id": "job_Tech_Lead_GitHub",
+    "title": "Tech Lead",
+    "company": "GitHub",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.639958",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|github": {
+    "job_id": "job_Backend_Engineer_GitHub",
+    "title": "Backend Engineer",
+    "company": "GitHub",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.640175",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|github": {
+    "job_id": "job_Frontend_Engineer_GitHub",
+    "title": "Frontend Engineer",
+    "company": "GitHub",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.640308",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|github": {
+    "job_id": "job_Solutions_Architect_GitHub",
+    "title": "Solutions Architect",
+    "company": "GitHub",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.640774",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|github": {
+    "job_id": "job_Staff_Engineer_GitHub",
+    "title": "Staff Engineer",
+    "company": "GitHub",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.640922",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|github": {
+    "job_id": "job_Principal_Engineer_GitHub",
+    "title": "Principal Engineer",
+    "company": "GitHub",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.641034",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|github": {
+    "job_id": "job_Python_Developer_GitHub",
+    "title": "Python Developer",
+    "company": "GitHub",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.641134",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|github": {
+    "job_id": "job_TypeScript_Engineer_GitHub",
+    "title": "TypeScript Engineer",
+    "company": "GitHub",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.641234",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|github": {
+    "job_id": "job_Platform_Engineer_GitHub",
+    "title": "Platform Engineer",
+    "company": "GitHub",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.641329",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|github": {
+    "job_id": "job_DevOps_Engineer_GitHub",
+    "title": "DevOps Engineer",
+    "company": "GitHub",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.641431",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|github": {
+    "job_id": "job_Cloud_Engineer_GitHub",
+    "title": "Cloud Engineer",
+    "company": "GitHub",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.641523",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|github": {
+    "job_id": "job_Security_Engineer_GitHub",
+    "title": "Security Engineer",
+    "company": "GitHub",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.641622",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|github": {
+    "job_id": "job_Site_Reliability_Engineer_GitHub",
+    "title": "Site Reliability Engineer",
+    "company": "GitHub",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.641732",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|github": {
+    "job_id": "job_Mobile_Engineer_GitHub",
+    "title": "Mobile Engineer",
+    "company": "GitHub",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.641837",
+    "cover_letter_preview": "Dear Hiring Manager at GitHub,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|gitlab": {
+    "job_id": "job_Tech_Lead_GitLab",
+    "title": "Tech Lead",
+    "company": "GitLab",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.641970",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|gitlab": {
+    "job_id": "job_Backend_Engineer_GitLab",
+    "title": "Backend Engineer",
+    "company": "GitLab",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.642081",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|gitlab": {
+    "job_id": "job_Frontend_Engineer_GitLab",
+    "title": "Frontend Engineer",
+    "company": "GitLab",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.642192",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|gitlab": {
+    "job_id": "job_Solutions_Architect_GitLab",
+    "title": "Solutions Architect",
+    "company": "GitLab",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.642333",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|gitlab": {
+    "job_id": "job_Staff_Engineer_GitLab",
+    "title": "Staff Engineer",
+    "company": "GitLab",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.642441",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|gitlab": {
+    "job_id": "job_Principal_Engineer_GitLab",
+    "title": "Principal Engineer",
+    "company": "GitLab",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.642536",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|gitlab": {
+    "job_id": "job_Python_Developer_GitLab",
+    "title": "Python Developer",
+    "company": "GitLab",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.642631",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|gitlab": {
+    "job_id": "job_TypeScript_Engineer_GitLab",
+    "title": "TypeScript Engineer",
+    "company": "GitLab",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.642726",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|gitlab": {
+    "job_id": "job_Platform_Engineer_GitLab",
+    "title": "Platform Engineer",
+    "company": "GitLab",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.642821",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|gitlab": {
+    "job_id": "job_DevOps_Engineer_GitLab",
+    "title": "DevOps Engineer",
+    "company": "GitLab",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.642936",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|gitlab": {
+    "job_id": "job_Cloud_Engineer_GitLab",
+    "title": "Cloud Engineer",
+    "company": "GitLab",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.643050",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|gitlab": {
+    "job_id": "job_Security_Engineer_GitLab",
+    "title": "Security Engineer",
+    "company": "GitLab",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.643147",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|gitlab": {
+    "job_id": "job_Site_Reliability_Engineer_GitLab",
+    "title": "Site Reliability Engineer",
+    "company": "GitLab",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.643265",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|gitlab": {
+    "job_id": "job_Mobile_Engineer_GitLab",
+    "title": "Mobile Engineer",
+    "company": "GitLab",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.643362",
+    "cover_letter_preview": "Dear Hiring Manager at GitLab,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|hashicorp": {
+    "job_id": "job_Tech_Lead_HashiCorp",
+    "title": "Tech Lead",
+    "company": "HashiCorp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.643482",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "backend engineer|hashicorp": {
+    "job_id": "job_Backend_Engineer_HashiCorp",
+    "title": "Backend Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.643600",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "frontend engineer|hashicorp": {
+    "job_id": "job_Frontend_Engineer_HashiCorp",
+    "title": "Frontend Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.643717",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "solutions architect|hashicorp": {
+    "job_id": "job_Solutions_Architect_HashiCorp",
+    "title": "Solutions Architect",
+    "company": "HashiCorp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.643832",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "staff engineer|hashicorp": {
+    "job_id": "job_Staff_Engineer_HashiCorp",
+    "title": "Staff Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.643942",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "principal engineer|hashicorp": {
+    "job_id": "job_Principal_Engineer_HashiCorp",
+    "title": "Principal Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.644056",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "python developer|hashicorp": {
+    "job_id": "job_Python_Developer_HashiCorp",
+    "title": "Python Developer",
+    "company": "HashiCorp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.644165",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "typescript engineer|hashicorp": {
+    "job_id": "job_TypeScript_Engineer_HashiCorp",
+    "title": "TypeScript Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.644348",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "platform engineer|hashicorp": {
+    "job_id": "job_Platform_Engineer_HashiCorp",
+    "title": "Platform Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.644568",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "devops engineer|hashicorp": {
+    "job_id": "job_DevOps_Engineer_HashiCorp",
+    "title": "DevOps Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.644729",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "cloud engineer|hashicorp": {
+    "job_id": "job_Cloud_Engineer_HashiCorp",
+    "title": "Cloud Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.644857",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "security engineer|hashicorp": {
+    "job_id": "job_Security_Engineer_HashiCorp",
+    "title": "Security Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.645047",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "site reliability engineer|hashicorp": {
+    "job_id": "job_Site_Reliability_Engineer_HashiCorp",
+    "title": "Site Reliability Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.645204",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "mobile engineer|hashicorp": {
+    "job_id": "job_Mobile_Engineer_HashiCorp",
+    "title": "Mobile Engineer",
+    "company": "HashiCorp",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.645336",
+    "cover_letter_preview": "Dear Hiring Manager at HashiCorp,\n\nI am writing to express my strong interest in..."
+  },
+  "tech lead|twilio": {
+    "job_id": "job_Tech_Lead_Twilio",
+    "title": "Tech Lead",
+    "company": "Twilio",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.645687",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "backend engineer|twilio": {
+    "job_id": "job_Backend_Engineer_Twilio",
+    "title": "Backend Engineer",
+    "company": "Twilio",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.645932",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "frontend engineer|twilio": {
+    "job_id": "job_Frontend_Engineer_Twilio",
+    "title": "Frontend Engineer",
+    "company": "Twilio",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.646099",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "solutions architect|twilio": {
+    "job_id": "job_Solutions_Architect_Twilio",
+    "title": "Solutions Architect",
+    "company": "Twilio",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.646284",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "staff engineer|twilio": {
+    "job_id": "job_Staff_Engineer_Twilio",
+    "title": "Staff Engineer",
+    "company": "Twilio",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.646515",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "principal engineer|twilio": {
+    "job_id": "job_Principal_Engineer_Twilio",
+    "title": "Principal Engineer",
+    "company": "Twilio",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.646638",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "python developer|twilio": {
+    "job_id": "job_Python_Developer_Twilio",
+    "title": "Python Developer",
+    "company": "Twilio",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.646747",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "typescript engineer|twilio": {
+    "job_id": "job_TypeScript_Engineer_Twilio",
+    "title": "TypeScript Engineer",
+    "company": "Twilio",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.646934",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "platform engineer|twilio": {
+    "job_id": "job_Platform_Engineer_Twilio",
+    "title": "Platform Engineer",
+    "company": "Twilio",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.647104",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "devops engineer|twilio": {
+    "job_id": "job_DevOps_Engineer_Twilio",
+    "title": "DevOps Engineer",
+    "company": "Twilio",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.647723",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "cloud engineer|twilio": {
+    "job_id": "job_Cloud_Engineer_Twilio",
+    "title": "Cloud Engineer",
+    "company": "Twilio",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.648117",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "security engineer|twilio": {
+    "job_id": "job_Security_Engineer_Twilio",
+    "title": "Security Engineer",
+    "company": "Twilio",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.648322",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "site reliability engineer|twilio": {
+    "job_id": "job_Site_Reliability_Engineer_Twilio",
+    "title": "Site Reliability Engineer",
+    "company": "Twilio",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.648620",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "mobile engineer|twilio": {
+    "job_id": "job_Mobile_Engineer_Twilio",
+    "title": "Mobile Engineer",
+    "company": "Twilio",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.649141",
+    "cover_letter_preview": "Dear Hiring Manager at Twilio,\n\nI am writing to express my strong interest in th..."
+  },
+  "tech lead|cloudflare": {
+    "job_id": "job_Tech_Lead_Cloudflare",
+    "title": "Tech Lead",
+    "company": "Cloudflare",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.649661",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "backend engineer|cloudflare": {
+    "job_id": "job_Backend_Engineer_Cloudflare",
+    "title": "Backend Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.650062",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "frontend engineer|cloudflare": {
+    "job_id": "job_Frontend_Engineer_Cloudflare",
+    "title": "Frontend Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.650253",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "solutions architect|cloudflare": {
+    "job_id": "job_Solutions_Architect_Cloudflare",
+    "title": "Solutions Architect",
+    "company": "Cloudflare",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.651064",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "staff engineer|cloudflare": {
+    "job_id": "job_Staff_Engineer_Cloudflare",
+    "title": "Staff Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.651246",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "principal engineer|cloudflare": {
+    "job_id": "job_Principal_Engineer_Cloudflare",
+    "title": "Principal Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.651372",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "python developer|cloudflare": {
+    "job_id": "job_Python_Developer_Cloudflare",
+    "title": "Python Developer",
+    "company": "Cloudflare",
+    "location": "Remote (Canada)",
+    "timestamp": "2026-05-24T18:45:27.651535",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "typescript engineer|cloudflare": {
+    "job_id": "job_TypeScript_Engineer_Cloudflare",
+    "title": "TypeScript Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (USA)",
+    "timestamp": "2026-05-24T18:45:27.651790",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
+  },
+  "platform engineer|cloudflare": {
+    "job_id": "job_Platform_Engineer_Cloudflare",
+    "title": "Platform Engineer",
+    "company": "Cloudflare",
+    "location": "Remote (Australia)",
+    "timestamp": "2026-05-24T18:45:27.651994",
+    "cover_letter_preview": "Dear Hiring Manager at Cloudflare,\n\nI am writing to express my strong interest i..."
   }
 }

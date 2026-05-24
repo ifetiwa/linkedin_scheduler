@@ -316,7 +316,7 @@ Are you thinking about how your engineering decisions affect business outcomes?"
     },
     {
         "id": 10,
-        "date": "2026-05-26",
+        "date": "2026-05-25",
         "time": "08:00",
         "image": "post10_wordpress.png",
         "title": "WordPress is underrated for enterprise clients",
@@ -343,7 +343,7 @@ Do you still write off WordPress? What changed your mind (or didn't)?""",
     },
     {
         "id": 11,
-        "date": "2026-05-28",
+        "date": "2026-05-27",
         "time": "12:00",
         "image": "post11_8lessons.png",
         "title": "8 years of dev in 8 lessons",
@@ -366,7 +366,7 @@ Which one hits hardest for you? Or what's #9?""",
     },
     {
         "id": 12,
-        "date": "2026-05-30",
+        "date": "2026-05-29",
         "time": "08:00",
         "image": "post12_brand_closer.png",
         "title": "What's next for me — and a thank you",
@@ -393,7 +393,443 @@ Let's build something.""",
         "hashtags": "#OpenToWork #SeniorEngineer #FullStackDeveloper #Cybersecurity #TechLeadership #SoftwareEngineer #NigerianInTech #LinkedInGrowth",
         "first_comment": f"GitHub: {GITHUB}  ·  Email: {EMAIL}",
     },
+    {
+        "id": 13,
+        "date": "2026-06-01",
+        "time": "08:00",
+        "image": "post13_cicd_pipeline.png",
+        "title": "Building a CI/CD pipeline that saves 4 hours/week",
+        "body": """Most teams I've worked with overspend on CI/CD setup and underspend on the small things that compound.
+
+Here's the pipeline I now reach for first — under 60 lines of YAML and it's saved us 4+ hours/week per developer:
+
+→ Cache node_modules / pip cache aggressively (10–20s saved per build)
+→ Run lint + typecheck in parallel with tests, not before
+→ Tag preview deploys with the PR number, auto-destroy on merge
+→ Block merges only on tests that touched changed files
+→ Notify on red builds in Slack — never email
+
+The biggest unlock isn't the tools. It's deciding what NOT to block on.
+
+A 9-minute pipeline that runs 30x a day quietly costs your team a full workday every week.
+
+What's the one thing in your pipeline you'd cut tomorrow if no one would notice?""",
+        "hashtags": "#DevOps #CICD #SoftwareEngineering #DeveloperProductivity #FullStackDeveloper #BuildPipeline #GitHubActions #EngineeringExcellence",
+        "first_comment": f"My GitHub Actions templates → {GITHUB}",
+    },
+    {
+        "id": 14,
+        "date": "2026-06-03",
+        "time": "08:00",
+        "image": "post14_microservices.png",
+        "title": "Microservices vs Monolith — when I pick each",
+        "body": """I've shipped both, broken both, and rewritten one into the other. Twice.
+
+Here's the rule of thumb I've landed on after 8 years:
+
+🟦 Stay monolith when:
+→ Team is under 8 engineers
+→ You're still validating product-market fit
+→ Your data has heavy cross-domain joins
+→ You don't have on-call rotation yet
+
+🟪 Reach for services when:
+→ Two teams are stepping on each other's deploys
+→ One subsystem has very different scale or compliance needs (e.g. payments, PII)
+→ You can afford a real observability stack (traces, not just logs)
+→ You've already enforced clean module boundaries inside the monolith
+
+The honest truth: 80% of "we need microservices" conversations are actually "we need clean module boundaries."
+
+Modular monoliths beat bad microservices every time.
+
+What's your team running today — and what would you change?""",
+        "hashtags": "#SoftwareArchitecture #Microservices #Monolith #SystemDesign #Backend #FullStackDeveloper #EngineeringLeadership #TechStrategy",
+        "first_comment": f"Notes on modular monoliths I keep referring back to → {GITHUB}",
+    },
+    {
+        "id": 15,
+        "date": "2026-06-05",
+        "time": "08:00",
+        "image": "post15_react_bundle.png",
+        "title": "How I cut a React bundle by 62%",
+        "body": """The app loaded in 8.4s on 4G. We needed it under 3.
+
+I expected weeks of work. Took 2 afternoons. 62% smaller bundle, 2.1s LCP.
+
+Here's the order I actually attacked it in:
+
+1. Run `npx vite-bundle-visualizer` first. Look for the suspicious giant blocks.
+2. moment.js → date-fns: -210KB
+3. Replaced full lodash with named imports: -88KB
+4. Dynamic import for the admin route: -340KB off the initial load
+5. Replaced 3 unused chart libs (yes, three) with one
+6. Compressed hero images with sharp at build time
+
+The lesson: most React perf problems aren't React. They're dependencies you forgot you added.
+
+Open your bundle analyzer once a quarter. It pays for itself.
+
+What's the biggest dependency you've gotten rid of?""",
+        "hashtags": "#React #WebPerformance #FrontendDevelopment #JavaScript #ReactJS #PerformanceOptimization #FullStackDeveloper #WebVitals",
+        "first_comment": f"My before/after bundle screenshots → {GITHUB}",
+    },
+    {
+        "id": 16,
+        "date": "2026-06-08",
+        "time": "08:00",
+        "image": "post16_hiring_seniors.png",
+        "title": "5 questions before hiring a senior developer",
+        "body": """I've sat on both sides of 40+ senior engineering interviews.
+
+The ones who turned out to be great hires answered these 5 questions differently than everyone else:
+
+1. "Tell me about a system you owned end-to-end — what would you do differently?"
+   → Strong answers admit specific mistakes. Weak ones describe what went well.
+
+2. "Walk me through a code review where you disagreed with someone more senior."
+   → I'm listening for how they hold ground without burning bridges.
+
+3. "What did you have to unlearn from your last role?"
+   → If they can't name something, they didn't grow there.
+
+4. "Show me a piece of production code you're proud of. Now show me one you're not."
+   → Self-awareness > syntax.
+
+5. "Who on your last team did you learn the most from, and why?"
+   → Real seniors name junior teammates here, not just architects.
+
+Tech screens tell you who can solve LeetCode. These tell you who can ship and grow a team.
+
+What's the one question you wish you'd asked in your last hire?""",
+        "hashtags": "#TechLeadership #EngineeringManagement #Hiring #TechRecruiting #SeniorDeveloper #SoftwareEngineering #TeamBuilding #Leadership",
+        "first_comment": f"The full interview rubric I use → {GITHUB}",
+    },
+    {
+        "id": 17,
+        "date": "2026-06-10",
+        "time": "08:00",
+        "image": "post17_multi_tenant.png",
+        "title": "Multi-tenant SaaS: the 3 hardest decisions",
+        "body": """Built two multi-tenant platforms now. Every "interesting" bug came back to one of these three calls:
+
+1. Shared schema vs schema-per-tenant vs DB-per-tenant.
+   → We started shared, regretted it for our top 3 customers (GDPR + reporting at scale).
+   → Settled on shared + schema-per-tenant for whales. Best of both.
+
+2. How tenant context flows through the request.
+   → Don't trust the JWT alone. Inject tenant_id at the edge, treat anywhere downstream as untrusted.
+   → A single forgotten WHERE clause leaks every customer's data.
+
+3. Background jobs.
+   → Tenant-aware queues from day one. One noisy customer should never block another.
+   → We added per-tenant rate limits on workers — paid off within 2 weeks.
+
+The pattern I now reach for first: shared schema + row-level security + per-tenant connection pools. It scales to ~500 tenants before you need to split.
+
+If you're building SaaS in 2026 — what's biting you the most?""",
+        "hashtags": "#SaaS #MultiTenant #SoftwareArchitecture #Backend #DatabaseDesign #FullStackDeveloper #SystemDesign #StartupEngineering",
+        "first_comment": f"My multi-tenant scaffolding repo → {GITHUB}",
+    },
+    {
+        "id": 18,
+        "date": "2026-06-12",
+        "time": "12:00",
+        "image": "post18_owasp.png",
+        "title": "The OWASP Top 10 every full-stack dev should actually know",
+        "body": """Security isn't a separate team's job. It's a tax you pay on every PR.
+
+I'm ISC2 trained and I still see these 10 mistakes in code I review every month:
+
+1. Broken access control — checking auth in the UI, not the API
+2. Cryptographic failures — storing tokens unencrypted, weak salts
+3. Injection — yes, SQL injection is still alive. So is template injection.
+4. Insecure design — features shipped before threat modeling
+5. Security misconfiguration — default credentials, open S3 buckets
+6. Vulnerable & outdated components — that npm audit warning matters
+7. Identification failures — no MFA, no rate limit on /login
+8. Software & data integrity failures — unverified CI/CD pipelines
+9. Logging & monitoring failures — you'll find out from a customer
+10. Server-side request forgery — letting users dictate URLs to fetch
+
+You don't have to memorize CVE codes. You have to internalize the categories.
+
+90% of breaches I've seen up close are in 1, 2, 3, and 7. Start there.
+
+Which of these has bitten you (or your team) hardest?""",
+        "hashtags": "#Cybersecurity #OWASP #ApplicationSecurity #SecureCoding #ISC2 #FullStackDeveloper #DevSecOps #InfoSec #SoftwareSecurity",
+        "first_comment": f"My OWASP checklist (PR template) → {GITHUB}",
+    },
+    {
+        "id": 19,
+        "date": "2026-06-15",
+        "time": "08:00",
+        "image": "post19_integration_first.png",
+        "title": "Why I write integration tests before unit tests",
+        "body": """Controversial take after 8 years and a lot of broken builds:
+
+Most teams over-invest in unit tests and under-invest in integration tests.
+
+Here's the order I now write tests in:
+
+1. One happy-path integration test for the new endpoint
+   → Real DB, real HTTP, real auth. Slow but priceless.
+
+2. One failure-path integration test
+   → Wrong tenant, expired token, invalid payload.
+
+3. THEN unit tests for the gnarly pure functions
+   → Date math, parsers, business rules with 6 branches.
+
+4. Snapshot tests only for stable visual components
+
+Why this order? Unit tests catch implementation bugs. Integration tests catch the bugs that actually ship to production.
+
+A passing test suite with 95% unit coverage and zero integration tests is theater. I've watched it ship security holes more than once.
+
+What's your team's ratio of unit vs integration?""",
+        "hashtags": "#TestingMatters #SoftwareTesting #IntegrationTesting #SoftwareEngineering #QualityAssurance #FullStackDeveloper #DevPractices #CleanCode",
+        "first_comment": f"My pytest + supertest scaffolding → {GITHUB}",
+    },
+    {
+        "id": 20,
+        "date": "2026-06-17",
+        "time": "08:00",
+        "image": "post20_db_indexing.png",
+        "title": "Database indexing: a practical guide for app devs",
+        "body": """A 4ms query went to 1.2 seconds. The table had 800k rows. The fix was 1 line.
+
+Indexing is the highest-leverage backend skill I've ever learned. And most app devs avoid it.
+
+A short, opinionated guide:
+
+→ Index every column you filter on with WHERE
+→ Index the JOIN columns, both sides
+→ Composite indexes match LEFT-TO-RIGHT — order matters
+→ `WHERE created_at > X AND user_id = Y` wants (user_id, created_at), not (created_at, user_id)
+→ Indexes make writes slower. Don't index everything "just in case."
+→ EXPLAIN ANALYZE is your second-best friend. pg_stat_statements is your first.
+
+The hidden killer: indexes you ADDED 2 years ago that no query uses anymore. Drop them.
+
+Run pg_stat_user_indexes monthly. You'll find at least one freebie every time.
+
+What's your favorite "added one index and the app got 10x faster" story?""",
+        "hashtags": "#DatabaseDesign #PostgreSQL #Backend #SQL #DataEngineering #SoftwareEngineering #FullStackDeveloper #PerformanceTuning",
+        "first_comment": f"My EXPLAIN ANALYZE cheat sheet → {GITHUB}",
+    },
+    {
+        "id": 21,
+        "date": "2026-06-19",
+        "time": "08:00",
+        "image": "post21_graphql_vs_rest.png",
+        "title": "GraphQL vs REST in 2026 — a pragmatic take",
+        "body": """I've shipped both at scale. The "GraphQL replaces REST" hype was overblown. So was the "GraphQL is dead" backlash.
+
+What I'd actually do today, project by project:
+
+REST when:
+→ You're building a public API for third parties
+→ Your clients are heterogeneous and cacheable behavior matters (CDN, browser cache)
+→ You have a small team and don't want N+1 query landmines
+
+GraphQL when:
+→ You have a mobile app + web app pulling overlapping data
+→ Frontend teams iterate faster than backend teams
+→ You can afford persisted queries + a proper resolver discipline
+
+tRPC when:
+→ Same team owns frontend and backend, TypeScript end-to-end
+→ You want types, not flexibility
+
+Hybrid is fine. Most teams I respect run REST for external + GraphQL or tRPC for their own apps.
+
+The choice isn't religious. It's about who's calling your API and how often the shape changes.
+
+What's your current API stack — and would you pick it again?""",
+        "hashtags": "#API #GraphQL #REST #Backend #FullStackDeveloper #SoftwareArchitecture #WebDevelopment #TypeScript #APIDesign",
+        "first_comment": f"My GraphQL + REST hybrid example → {GITHUB}",
+    },
+    {
+        "id": 22,
+        "date": "2026-06-22",
+        "time": "12:00",
+        "image": "post22_standup.png",
+        "title": "A standup that doesn't waste 30 minutes",
+        "body": """I've been in standups where 7 engineers reported status for 35 minutes. Nobody acted on anything.
+
+Here's the standup format I run now — under 8 minutes, 3 days a week:
+
+1. Each person, ONE sentence: "I'm working on X today."
+   → No yesterday recap. The board has that.
+
+2. Then a single question: "Anything blocked?"
+   → Blockers get a 30-second naming. Solutions go to async afterwards.
+
+3. Then: "Anything anyone should know that isn't on the board?"
+   → 90% of the time, nothing. Good.
+
+That's it. No round-the-room status theater.
+
+The number that changed for us:
+→ Standup minutes/week: 105 → 24
+→ Engineers reporting "I'm more productive": 8 of 9 in our retro
+
+The point of standup isn't reporting. It's surfacing the things that need to be unstuck today.
+
+What's your current standup like — and what would you change?""",
+        "hashtags": "#EngineeringLeadership #AgileLeadership #Standups #TeamProductivity #SoftwareEngineering #TechLeadership #RemoteTeams #EngineeringCulture",
+        "first_comment": f"The 5-bullet standup template my team uses → {GITHUB}",
+    },
+    {
+        "id": 23,
+        "date": "2026-06-24",
+        "time": "08:00",
+        "image": "post23_web_vitals.png",
+        "title": "Web Vitals: the only 3 metrics I optimize for",
+        "body": """Stop chasing every Lighthouse score. Google uses 3 numbers for ranking. Optimize THOSE.
+
+After tuning ~15 production apps, here's where I focus:
+
+1. LCP (Largest Contentful Paint) → target under 2.5s
+   → The hero image. Compress it. Preload it. Serve it from a CDN.
+
+2. INP (Interaction to Next Paint, replaced FID in 2024) → target under 200ms
+   → The thing they tap. Don't block the main thread with heavy JS.
+   → Use `requestIdleCallback` for non-urgent work. Use Web Workers for heavy lifting.
+
+3. CLS (Cumulative Layout Shift) → target under 0.1
+   → The page jumping while it loads. Reserve image dimensions. Don't inject ads above content.
+
+That's it. Everything else is decoration.
+
+Tools I actually use:
+→ PageSpeed Insights for the score
+→ Chrome DevTools Performance tab for the why
+→ Real User Monitoring (Sentry / Datadog) for the truth
+
+One score on your laptop ≠ what your users see on a 3-year-old Android.
+
+What's your team's worst Web Vital right now?""",
+        "hashtags": "#WebPerformance #CoreWebVitals #SEO #FrontendDevelopment #WebDevelopment #PerformanceOptimization #FullStackDeveloper #UX",
+        "first_comment": f"My Web Vitals audit checklist → {GITHUB}",
+    },
+    {
+        "id": 24,
+        "date": "2026-06-26",
+        "time": "08:00",
+        "image": "post24_typescript.png",
+        "title": "TypeScript: 3 patterns I now use every day",
+        "body": """I avoided TypeScript for 3 years. Then I migrated a 40k-line codebase. Now I won't go back.
+
+The 3 patterns that pay rent in my code every single day:
+
+1. Discriminated unions for API responses
+   → type ApiResult<T> = { ok: true; data: T } | { ok: false; error: string }
+   → Forces the compiler to make you handle the error case. No more "undefined is not a function" at 2am.
+
+2. `as const` + `keyof typeof` for finite string sets
+   → No more enums. const ROLES = ['admin','user','guest'] as const; type Role = (typeof ROLES)[number]
+   → Lets you map over the values at runtime AND keep type safety.
+
+3. Branded types for IDs you should never mix up
+   → type UserId = string & { __brand: 'UserId' }
+   → Now passing a postId where a userId belongs is a compile error, not a production bug.
+
+The pattern I see junior devs miss: TypeScript isn't about adding types. It's about making invalid states unrepresentable.
+
+Which pattern would you add to this list?""",
+        "hashtags": "#TypeScript #JavaScript #WebDevelopment #FullStackDeveloper #SoftwareEngineering #FrontendDevelopment #TypeSafety #CleanCode",
+        "first_comment": f"My TypeScript patterns repo → {GITHUB}",
+    },
+    {
+        "id": 25,
+        "date": "2026-06-29",
+        "time": "08:00",
+        "image": "post25_code_reviews.png",
+        "title": "Code reviews that don't hurt",
+        "body": """The fastest way to lose a good engineer is bad code review culture.
+
+After leading reviews for years, here's what I've changed about how I do them:
+
+→ I lead with what I'd do differently, not with what's "wrong"
+→ I prefix nitpicks with "nit:" so the author can ignore them
+→ I ask questions instead of giving commands
+→ "Why this approach over X?" beats "Use X instead."
+→ I approve with caveats. Holding a PR for 3 nits is a power move, not a quality bar.
+→ I review the diff in tools/CI BEFORE the human code
+
+The number I track:
+→ Time from "ready for review" to first comment.
+→ For my teams: under 4 working hours, every time. Aging PRs kill morale.
+
+Review is teaching. If your reviews make the author smaller, you're doing it wrong.
+
+What's one thing your team does in reviews that you'd recommend?""",
+        "hashtags": "#CodeReview #TechLeadership #EngineeringCulture #SoftwareEngineering #TeamProductivity #FullStackDeveloper #Mentorship #DevPractices",
+        "first_comment": f"My code review checklist (PR template) → {GITHUB}",
+    },
 ]
+
+# ─── Post overrides (UI-editable layer) ──────────────────────────────────────
+# The POSTS list above is the seed. Anything edited from the dashboard is saved
+# to DATA_DIR/post_overrides.json and merged on read by get_posts().
+# Override schema: {"<post_id>": {"title": ..., "body": ..., "date": ..., "time": ..., "hashtags": ..., "first_comment": ..., "published_at": ...}}
+
+POST_OVERRIDES_FILE = DATA_DIR / "post_overrides.json"
+PUBLISHED_FILE = DATA_DIR / "published_posts.json"
+
+
+def _load_json(path, default):
+    if not path.exists():
+        return default
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
+
+
+def _save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def get_posts():
+    """Return POSTS merged with any UI-saved overrides. Always call this
+    instead of reading POSTS directly so edits show up everywhere."""
+    overrides = _load_json(POST_OVERRIDES_FILE, {})
+    merged = []
+    for post in POSTS:
+        pid = str(post["id"])
+        if pid in overrides:
+            merged.append({**post, **overrides[pid]})
+        else:
+            merged.append(dict(post))
+    return merged
+
+
+def save_post_override(post_id, fields):
+    """Persist edits for a single post. `fields` is a dict of partial overrides."""
+    allowed = {"title", "body", "date", "time", "hashtags", "first_comment", "image"}
+    clean = {k: v for k, v in fields.items() if k in allowed}
+    overrides = _load_json(POST_OVERRIDES_FILE, {})
+    overrides[str(post_id)] = {**overrides.get(str(post_id), {}), **clean}
+    _save_json(POST_OVERRIDES_FILE, overrides)
+    return overrides[str(post_id)]
+
+
+def is_published(post_id):
+    """Has this post already been published in a previous run today/recently?"""
+    pub = _load_json(PUBLISHED_FILE, {})
+    return str(post_id) in pub
+
+
+def mark_published(post_id):
+    pub = _load_json(PUBLISHED_FILE, {})
+    pub[str(post_id)] = datetime.now().isoformat()
+    _save_json(PUBLISHED_FILE, pub)
+
 
 # ─── LinkedIn API ─────────────────────────────────────────────────────────────
 
@@ -1112,28 +1548,43 @@ COMPETITIVE ADVANTAGES:
 
 # ─── Scheduler ────────────────────────────────────────────────────────────────
 
-def make_job(post: dict):
-    """Returns a function that publishes this specific post."""
+def make_job(post_id: int):
+    """Returns a job that re-reads the post on every fire so edits made via
+    the dashboard apply at publish time. Also dedupes against the published
+    tracker so a manual 'Post Now' followed by the scheduled tick doesn't
+    double-publish."""
     def job():
         today = date.today().isoformat()
-        if post["date"] == today:
-            log.info(f"⏰ Running scheduled post {post['id']}: {post['title']}")
-            publish_post(post)
-        else:
-            log.debug(f"Post {post['id']} scheduled for {post['date']}, skipping today ({today})")
+        # Always read the latest copy (in case the user edited it)
+        post = next((p for p in get_posts() if p["id"] == post_id), None)
+        if not post:
+            log.warning(f"Post {post_id} no longer exists; skipping")
+            return schedule.CancelJob
+        if post["date"] != today:
+            return
+        if is_published(post_id):
+            log.info(f"Post {post_id} already published — skipping scheduled tick")
+            return
+        log.info(f"⏰ Running scheduled post {post['id']}: {post['title']}")
+        ok = publish_post(post)
+        if ok:
+            mark_published(post_id)
     return job
 
 
 def schedule_all():
-    """Register all posts with the scheduler."""
-    for post in POSTS:
-        post_time = post["time"]
-        job_fn = make_job(post)
-        schedule.every().day.at(post_time).do(job_fn)
-        log.info(f"Scheduled post {post['id']:02d} — {post['date']} at {post_time} — '{post['title'][:45]}...'")
+    """Register all posts with the scheduler (one daily tick per post)."""
+    schedule.clear()  # safe to call repeatedly — clears prior registrations
+    posts = get_posts()
+    for post in posts:
+        try:
+            schedule.every().day.at(post["time"]).do(make_job(post["id"]))
+            log.info(f"Scheduled post {post['id']:02d} — {post['date']} at {post['time']} — '{post['title'][:45]}...'")
+        except Exception as e:
+            log.warning(f"Failed to schedule post {post.get('id')}: {e}")
 
     log.info(f"\n{'='*60}")
-    log.info(f"Scheduler active. {len(POSTS)} posts scheduled for May 2026.")
+    log.info(f"Scheduler active. {len(posts)} posts registered (Mon/Wed/Fri rhythm).")
     log.info(f"DRY_RUN = {DRY_RUN}")
     log.info(f"{'='*60}\n")
 
@@ -1151,13 +1602,15 @@ def print_schedule():
 
 
 def run_now(post_id: int):
-    """Manually trigger a specific post immediately."""
-    post = next((p for p in POSTS if p["id"] == post_id), None)
+    """Manually trigger a specific post immediately. Honors UI edits via get_posts()."""
+    post = next((p for p in get_posts() if p["id"] == post_id), None)
     if not post:
         log.error(f"Post {post_id} not found.")
         return
     log.info(f"Manual trigger: post {post_id}")
-    publish_post(post)
+    ok = publish_post(post)
+    if ok:
+        mark_published(post_id)
 
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
